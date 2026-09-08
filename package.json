@@ -1,0 +1,30 @@
+{
+  "name": "oep-web-v3",
+  "version": "0.3.0",
+  "private": true,
+  "description": "OEP Web v3 — inversión y evaluación ambiental",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run build:data && npm run check:atlas && next build",
+    "build:data": "node scripts/build-data.mjs",
+    "start": "npx serve out",
+    "check:atlas": "node scripts/check-atlas.mjs"
+  },
+  "dependencies": {
+    "echarts": "^6.1.0",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
+}

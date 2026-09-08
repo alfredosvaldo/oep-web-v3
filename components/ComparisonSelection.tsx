@@ -1,0 +1,3 @@
+'use client';
+import { AtlasData, Dimension } from '@/lib/atlas';
+export default function ComparisonSelection({data,type,keys,change}: {data:AtlasData;type:Dimension;keys:string[];change:(keys:string[])=>void}) {return <div className="comparison-picker">{[0,1,2].map(i=><label key={i}>Entidad {i+1}{i===2?' · opcional':''}<select aria-label={`Entidad ${i+1}`} value={keys[i]||''} onChange={e=>{const next=[...keys];next[i]=e.target.value;change(next);}}><option value="">Seleccionar {type==='region'?'región':type==='sector'?'sector':'empresa'}</option>{data.entities[type].map(e=><option value={e.key} key={e.key} disabled={keys.includes(e.key)&&keys[i]!==e.key}>{e.name}</option>)}</select></label>)}</div>;}

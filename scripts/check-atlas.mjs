@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import ts from 'typescript';
+const require=createRequire(import.meta.url);
+const source=ts.transpileModule(readFileSync('lib/atlas.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const module={exports:{}};new Function('module','exports','require',source)(module,module.exports,require);
+const {DEFAULT,readFilters,paramsFor,filterProjects,metrics,normalize}=module.exports;
+const read=f=>JSON.parse(readFileSync(`public/data/${f}`,'utf8'));
+const index=read('atlas/index.json'), summary=read('atlas/summary.json'), lookup=read('atlas/lookup.json');
+const chunks=read('search/projects.json').files;
+const full=chunks.flatMap(file=>read(file));const byId=new Map(full.map(p=>[p.id,p]));
+assert.equal(index.rows.length,30119);assert.equal(new Set(index.rows.map(r=>r[0])).size,30119);
+const projects=index.rows.map(r=>{
+ const src=byId.get(r[0]);assert.ok(src);assert.equal(src.m,r[5]);assert.equal(src.n,r[1]);assert.equal(src.fp,r[8]);assert.equal(src.fc,r[9]);assert.equal(src.dt,r[10]);assert.equal(src.lo,r[6]);assert.equal(src.la,r[7]);assert.equal(src.e,index.statuses[r[11]]);assert.equal(src.eg,index.groups[r[12]]);
+ const rg=index.entities.region[r[2]],s=index.entities.sector[r[3]],ti=index.entities.titular[r[4]];
+ assert.equal(src.rg,rg.name);assert.equal(src.s,s.name);assert.equal(src.ti,ti.name);
+ return{id:r[0],n:r[1],rg:rg.name,rk:rg.key,s:s.name,sk:s.key,ti:ti.name,tk:ti.key,m:r[5],lo:r[6],la:r[7],fp:r[8],fc:r[9],dt:r[10],e:src.e,eg:src.eg,a:src.a};
+});
+for(const file of chunks)for(const p of read(file))assert.equal(lookup[p.id],file);
+for(const [dim,list] of Object.entries(index.entities))assert.equal(new Set(list.map(e=>e.key)).size,list.length,`${dim}: unique entity keys`);
+const qualified=filterProjects(projects,DEFAULT);assert.equal(qualified.length,365);assert.equal(filterProjects(projects,{...DEFAULT,status:'evaluation'}).length,366);assert.equal(filterProjects(projects,{...DEFAULT,status:'approved'}).length,18625);assert.equal(metrics(projects).mapped,30117);assert.equal(summary.projects.length,365);
+assert.ok(Math.abs(metrics(qualified).investment-metrics(summary.projects).investment)<1e-7);
+for(const dim of ['region','sector','titular'])for(const entity of read(`agg/${dim}.json`).items){const list=filterProjects(projects,{...DEFAULT,status:'all',[dim]:entity.slug});const m=metrics(list);assert.equal(m.count,entity.proyectos,entity.nombre);assert.ok(Math.abs(m.investment-entity.inversion_mmu)<1e-6,entity.nombre);}
+assert.equal(normalize('Ñuble / Energía'),normalize('Nuble / energia'));
+const accented=filterProjects(projects,{...DEFAULT,status:'all',q:'energía'}),plain=filterProjects(projects,{...DEFAULT,status:'all',q:'energia'});assert.deepEqual(accented.map(p=>p.id),plain.map(p=>p.id));
+const f={...DEFAULT,region:'antofagasta',sector:'energia',project:qualified[0].id,sort:'recent',page:2};assert.deepEqual(readFilters(paramsFor(f)),f);
+assert.equal(readFilters(new URLSearchParams('from=2026&to=1993&status=bad&page=-2')).from,1993);
+assert.equal(metrics([]).median,null);assert.equal(metrics([]).approvalRate,null);assert.equal(metrics(qualified).durationN,0);
+const regional=filterProjects(projects,{...DEFAULT,region:'antofagasta',sector:'energia'});assert.ok(regional.length>0);const regionalSum=regional.reduce((sum,p)=>sum+byId.get(p.id).m,0);assert.equal(metrics(regional).investment,regionalSum);
+console.log(`PASS: ${projects.length} IDs and chunk lookups, exact values, all entity totals, status scopes, accent search, URL round trip, missing durations. Journey portfolio: ${regional.length} projects / US$ ${regionalSum} MM.`);

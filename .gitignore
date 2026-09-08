@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.next-dev/
+out/
+.venv/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# Fuente con datos crudos: no se versiona (el pipeline la requiere localmente)
+*.xlsx
