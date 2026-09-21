@@ -14,7 +14,7 @@ The local `node_modules` link reuses v2 dependencies. On another computer, run `
 
 `GHPAGES=1 npm run build`
 
-The export is written to `out/`, with the `/oep-web-v3/` prefix. The public site is deployed separately to GitHub Pages at https://alfredosvaldo.github.io/oep-web-v3/.
+The export is written to `out/`. With `public/CNAME` set to `oep-chile.com`, assets, data and routes use the domain root. Without that file, `GHPAGES=1` uses the repository prefix `/oep-web-v3/`.
 
 The shared atlas index and URL filters connect the map, table, project details, profiles and comparison. The homepage opens with the requested headline and a quiet, silent video backdrop, followed by the full-size map. The video pauses outside the viewport and has a still-image fallback for reduced motion.
 
@@ -29,7 +29,7 @@ The shared atlas index and URL filters connect the map, table, project details, 
 
 ## Publishing
 
-The source repository is `alfredosvaldo/oep-web-v3`; GitHub Pages serves the `gh-pages` branch at https://alfredosvaldo.github.io/oep-web-v3/.
+The source repository is `alfredosvaldo/oep-web-v3`; GitHub Pages serves the `gh-pages` branch at https://oep-chile.com/. Keep `public/CNAME` in every export so deployments preserve the custom domain.
 
 Run `bash scripts/deploy-gh-pages.sh` from this project to regenerate and publish. The original Excel workbook belongs at `data/raw/SEIA_TOTAL_93_26Q2.xlsx` and stays local. A clone without that workbook can verify the committed generated data with `npm run check:atlas` and export it using `GHPAGES=1 npx next build`.
 

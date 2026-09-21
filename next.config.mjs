@@ -1,8 +1,12 @@
-/** @type {import('next').NextConfig} */
-// GitHub Pages sirve el sitio bajo /oep-web-v3/: GHPAGES=1 activa el prefijo
-// (assets y fetch estáticos vía NEXT_PUBLIC_BASE_PATH, que queda '' en local).
+import { existsSync, readFileSync } from 'node:fs';
+
+// A custom Pages domain serves at the root; repository hosting uses its prefix.
+const cnameFile = new URL('./public/CNAME', import.meta.url);
+const customDomain = existsSync(cnameFile) ? readFileSync(cnameFile, 'utf8').trim() : '';
 const isGhPages = process.env.GHPAGES === '1';
-const basePath = isGhPages ? '/oep-web-v3' : '';
+const basePath = isGhPages && !customDomain ? '/oep-web-v3' : '';
+
+/** @type {import('next').NextConfig} */
 
 const nextConfig = {
   output: 'export',

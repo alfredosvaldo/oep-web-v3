@@ -24,7 +24,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://alfredosvaldo.github.io/oep-web-v3'),
+  metadataBase: new URL('https://oep-chile.com'),
   title: {
     default: 'OEP · Observatorio Económico de Permisos',
     template: '%s · OEP',
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
     title: 'OEP · Tres décadas de permisos, tiempos, inversión y empleo',
     description:
       'Atlas, rankings y fichas de actores y territorio de los 30.119 expedientes del SEIA (1993–2026-T2): regiones, sectores, titulares y tiempos de aprobación.',
-    images: [{ url: 'https://alfredosvaldo.github.io/oep-web-v3/og.jpg', width: 1200, height: 630, alt: 'Mapa de partículas: proyectos del SEIA en Chile' }],
+    images: [{ url: 'https://oep-chile.com/og.jpg', width: 1200, height: 630, alt: 'Mapa de partículas: proyectos del SEIA en Chile' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'OEP · Observatorio Económico de Permisos',
     description:
       '30.119 proyectos y US$ 1,05 BN declarados ante el SEIA desde 1993, convertidos en inteligencia económica abierta.',
-    images: ['https://alfredosvaldo.github.io/oep-web-v3/og.jpg'],
+    images: ['https://oep-chile.com/og.jpg'],
   },
 };
 

@@ -2,7 +2,7 @@ import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import type { MetadataRoute } from 'next';
 
-const BASE = 'https://alfredosvaldo.github.io/oep-web-v3';
+const BASE = 'https://oep-chile.com';
 const LAST_MODIFIED = new Date('2026-09-04');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
