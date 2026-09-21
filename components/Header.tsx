@@ -7,7 +7,6 @@ import { LogoLockup } from '@/components/Logo';
 const NAV = [
   { href: '/mapa/', label: 'Mapa' },
   { href: '/perfiles/', label: 'Actores y territorio' },
-  { href: '/comparar/', label: 'Comparar' },
   { href: '/informes/', label: 'Informes' },
   { href: '/datos-metodologia/', label: 'Datos y metodología' },
 ];
@@ -25,7 +24,7 @@ export default function Header() {
             completa aparece desde xl, abajo manda el menú <details>. */}
         <nav aria-label="Navegación principal" className="ml-auto hidden items-center gap-5 xl:flex">
           {NAV.map((item) => {
-            const active = pathname === item.href || (item.href === '/mapa/' && pathname === '/explorador/') || (item.href === '/comparar/' && pathname === '/rankings/');
+            const active = pathname === item.href || (item.href === '/mapa/' && pathname === '/explorador/');
             return (
               <Link
                 key={item.href}

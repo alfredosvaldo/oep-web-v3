@@ -6,7 +6,7 @@ const BASE = 'https://alfredosvaldo.github.io/oep-web-v3';
 const LAST_MODIFIED = new Date('2026-09-04');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = ['', '/explorador', '/mapa', '/perfiles', '/rankings', '/comparar', '/informes', '/datos-metodologia'].map(
+  const staticRoutes = ['', '/explorador', '/mapa', '/perfiles', '/rankings', '/informes', '/datos-metodologia'].map(
     (p) => ({ url: `${BASE}${p}/`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly' as const, priority: p === '' ? 1 : 0.8 }),
   );
 

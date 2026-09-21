@@ -34,3 +34,11 @@ The source repository is `alfredosvaldo/oep-web-v3`; GitHub Pages serves the `gh
 Run `bash scripts/deploy-gh-pages.sh` from this project to regenerate and publish. The original Excel workbook belongs at `data/raw/SEIA_TOTAL_93_26Q2.xlsx` and stays local. A clone without that workbook can verify the committed generated data with `npm run check:atlas` and export it using `GHPAGES=1 npx next build`.
 
 The background video was created with Gemini and provided by the project owner, who authorized its public release. The hero uses a tighter crop to keep the corner watermark outside the visible frame. Its silent derivative and poster are in `public/media/`. No employment estimates are derived from the SEIA data.
+
+## Comparison access demo
+
+Comparison lives at `/privado/comparacion/` and is removed from public navigation, contextual links and the sitemap. The old `/comparar/` route is no longer exported. The new page requests `noindex, nofollow`.
+
+Example credentials: user `demo`, password `OEPdemo2026`. The session lasts for the current browser tab, survives reloads, and can be closed with “Cerrar sesión”. Shared URLs preserve comparison parameters and require the example login in a new session.
+
+This is a **client-side demonstration, not real access control**. GitHub Pages, its JavaScript, source repository and SEIA data remain public. Do not use this gate for confidential content or real passwords. Production private access requires server-side authentication and authorization. The split access layout draws on the existing Permiscopio pilot, using OEP branding.

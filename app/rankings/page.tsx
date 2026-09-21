@@ -168,7 +168,7 @@ export default function Rankings() {
                     {visible.map((it, i) => (
                       <tr key={it.slug} className="transition-colors hover:bg-oep-ink/5">
                         <td className="px-4 py-3 font-mono text-[12px] tabular text-oep-ink/40">{i + 1}</td>
-                        <td className="max-w-[340px] px-4 py-3 font-medium">{['region','sector','titular'].includes(dim) ? <><Link className="hover:underline" href={dim !== 'titular' || (items?.indexOf(it) ?? 501) < 500 ? `/perfiles/${dim}-${it.slug}/` : `/mapa/?status=all&${dim}=${it.slug}`}>{it.nombre}</Link><Link className="block text-[12px] underline mt-2" href={`/comparar/?type=${dim}&entities=${it.slug}&status=all`}>Comparar ↗</Link></> : it.nombre}</td>
+                        <td className="max-w-[340px] px-4 py-3 font-medium">{['region','sector','titular'].includes(dim) ? <><Link className="hover:underline" href={dim !== 'titular' || (items?.indexOf(it) ?? 501) < 500 ? `/perfiles/${dim}-${it.slug}/` : `/mapa/?status=all&${dim}=${it.slug}`}>{it.nombre}</Link></> : it.nombre}</td>
                         <td className="px-4 py-3 text-right tabular">{fmtInt(it.proyectos)}</td>
                         <td className="px-4 py-3">
                           <div className="flex items-center justify-end gap-2">

@@ -170,3 +170,51 @@ button:disabled {opacity:.45;cursor:not-allowed;}
   .film-motion-control { bottom:15px; right:20px; min-height:40px; background:rgba(247,248,245,.65); }
 }
 @media(prefers-reduced-motion:reduce) { .film-hero-video { display:none; } }
+
+/* Separate demonstration access, inspired by Permiscopio's editorial login. */
+.access-loading { min-height:100dvh; display:grid; place-items:center; }
+.access-page { min-height:100dvh; display:grid; place-items:center; padding:48px 32px; background:#eef0ed; }
+.access-shell { width:min(1120px,100%); display:grid; grid-template-columns:1.1fr 1fr; min-height:650px; border:1px solid var(--oep-line); background:var(--oep-paper); }
+.access-story { display:flex; flex-direction:column; padding:44px; background:#202d38; color:#f7f8f5; }
+.access-brand { display:flex; align-items:center; gap:15px; width:fit-content; font-family:var(--font-space-grotesk); font-size:24px; }
+.access-brand small { display:block; margin-top:2px; color:#bac4ca; font:12px var(--font-inter); }
+.access-message { margin:auto 0; padding:64px 0; }
+.access-eyebrow { color:#d9b99e; font:11px var(--font-plexmono); text-transform:uppercase; letter-spacing:.12em; margin-bottom:22px; }
+.access-message h1 { font-family:var(--font-space-grotesk); font-weight:500; font-size:clamp(32px,3.4vw,45px); line-height:1.12; letter-spacing:-.045em; }
+.access-message>p:last-child { color:#c5ced2; font-size:15px; line-height:1.8; margin-top:24px; max-width:370px; }
+.access-story-footer { padding-top:22px; border-top:1px solid #ffffff26; font-size:12px; line-height:1.9; }
+.access-story-footer span { color:#aab7bf; }
+.access-form-panel { display:grid; place-items:center; padding:48px; }
+.access-form-wrap { width:100%; max-width:350px; }
+.access-form-wrap h2 { font-family:var(--font-space-grotesk); font-size:30px; line-height:1.2; letter-spacing:-.04em; margin-top:16px; }
+.access-intro { font-size:14px; line-height:1.7; color:#5d6871; margin:16px 0 30px; }
+.access-form-wrap label { display:block; font-size:13px; font-weight:500; margin:20px 0 8px; }
+.access-form-wrap input { width:100%; min-width:0; height:48px; background:#fff; border:1px solid #bcc4c6; border-radius:2px; padding:0 13px; font-size:16px; }
+.access-password { position:relative; }
+.access-password input { padding-right:82px; }
+.access-password button { position:absolute; right:4px; top:2px; height:44px; padding:0 10px; color:#52606a; font-size:12px; }
+.access-submit { display:flex; align-items:center; justify-content:space-between; width:100%; margin-top:26px; min-height:48px; padding:12px 17px; color:#fff; background:#202d38; font-size:14px; }
+.access-submit:hover { background:#314453; }
+.access-error { margin-top:12px; color:#9b342d; font-size:13px; line-height:1.5; }
+.access-demo-note { color:#69747b; font-size:12px; line-height:1.6; margin-top:16px; }
+.access-back { display:inline-block; margin-top:34px; font-size:13px; color:#4c5b65; text-decoration:underline; text-underline-offset:4px; }
+.private-header { background:var(--oep-paper); border-bottom:1px solid var(--oep-line); }
+.private-header>div { max-width:1320px; padding:16px 40px; margin:auto; display:flex; align-items:center; gap:24px; }
+.private-section-label { margin-left:auto; font-size:14px; }
+.private-section-label small { margin-left:8px; font:10px var(--font-plexmono); color:#68757d; text-transform:uppercase; }
+@media(max-width:767px) {
+ .access-page { display:block; padding:0; }
+ .access-shell { display:block; border:0; min-height:100dvh; }
+ .access-story { padding:26px 24px; }
+ .access-brand { font-size:20px; }
+ .access-brand svg { width:28px; height:28px; }
+ .access-message { padding:28px 0 0; }
+ .access-message h1 { font-size:32px; }
+ .access-eyebrow { margin-bottom:12px; }
+ .access-message>p:last-child,.access-story-footer { display:none; }
+ .access-form-panel { padding:34px 24px 40px; }
+ .access-form-wrap { max-width:440px; }
+ .private-header>div { padding:12px 20px; gap:12px; flex-wrap:wrap; }
+ .private-section-label { display:none; }
+ .private-header .atlas-button { margin-left:auto; }
+}
