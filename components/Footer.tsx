@@ -9,8 +9,7 @@ export default function Footer() {
           <div>
             <Logo className="h-6 w-6" compact />
             <p className="mt-3 max-w-sm text-[14px] leading-6 text-oep-ink/70">
-              Observatorio Económico de Permisos: spin-off universitario independiente. No recibe
-              financiamiento de organismos evaluados ni de titulares de proyectos.
+              Observatorio Económico de Permisos.
             </p>
           </div>
           <div className="text-[14px] leading-6">
