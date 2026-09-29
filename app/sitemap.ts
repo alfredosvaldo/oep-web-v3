@@ -4,11 +4,18 @@ import type { MetadataRoute } from 'next';
 
 const BASE = 'https://oep-chile.com';
 const LAST_MODIFIED = new Date('2026-09-04');
+const NEWS_LAST_MODIFIED = new Date('2026-09-29');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = ['', '/explorador', '/mapa', '/perfiles', '/rankings', '/informes', '/datos-metodologia'].map(
     (p) => ({ url: `${BASE}${p}/`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly' as const, priority: p === '' ? 1 : 0.8 }),
   );
+  const newsRoute = {
+    url: `${BASE}/noticias/`,
+    lastModified: NEWS_LAST_MODIFIED,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  };
 
   const files = await readdir(path.join(process.cwd(), 'public/data/profiles'));
   const profiles = files
@@ -20,5 +27,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-  return [...staticRoutes, ...profiles];
+  return [...staticRoutes, newsRoute, ...profiles];
 }

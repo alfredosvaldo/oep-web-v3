@@ -7,6 +7,7 @@ import { LogoLockup } from '@/components/Logo';
 const NAV = [
   { href: '/mapa/', label: 'Mapa' },
   { href: '/perfiles/', label: 'Actores y territorio' },
+  { href: '/noticias/', label: 'Noticias' },
   { href: '/informes/', label: 'Informes' },
   { href: '/datos-metodologia/', label: 'Datos y metodología' },
 ];
@@ -20,7 +21,7 @@ export default function Header() {
         <Link href="/" className="shrink-0" aria-label="OEP · Inicio">
           <LogoLockup />
         </Link>
-        {/* Siete secciones + lockup + metadata no caben en 1024: la nav
+        {/* Cinco secciones + lockup + metadata no caben en 1024: la nav
             completa aparece desde xl, abajo manda el menú <details>. */}
         <nav aria-label="Navegación principal" className="ml-auto hidden items-center gap-5 xl:flex">
           {NAV.map((item) => {
