@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
+import { REPORTS, type Informe } from '@/lib/informes';
 
 export const metadata: Metadata = {
   title: 'Informes',
@@ -10,30 +11,13 @@ export const metadata: Metadata = {
     'Análisis periódicos del OEP sobre la inversión evaluada en el SEIA: cierre de trimestres, sectores y territorios, con la metodología reproducible del observatorio.',
 };
 
-/**
- * Catálogo de informes publicados. Para dar de alta uno:
- * 1. Copia el PDF a public/informes/ (p. ej. public/informes/cierre-2026-t2.pdf).
- * 2. Agrega aquí la entrada con título, período, descripción y archivo.
- * La tarjeta destacada (destacado: true) abre la página.
- */
-interface Informe {
-  slug: string;
-  titulo: string;
-  periodo: string;
-  descripcion: string;
-  archivo: string;
-  fecha: string;
-  tags: string[];
-  destacado?: boolean;
-}
-
-const INFORMES: Informe[] = [];
+/** Catálogo: sale de lib/informes.ts (un informe nuevo = una entrada allí + sus CSV). */
 
 /** Fila de catálogo: regla fina y jerarquía tipográfica, sin tarjeta. */
 function FilaInforme({ inf }: { inf: Informe }) {
   return (
     <a
-      href={`/informes/${inf.archivo}`}
+      href={`/informes/${inf.slug}/`}
       className="group grid gap-x-8 gap-y-2 border-b border-oep-line py-6 transition-colors duration-nav hover:bg-oep-ink/5 md:grid-cols-[160px_1fr_auto]"
     >
       <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-oep-ink/55">
@@ -48,15 +32,14 @@ function FilaInforme({ inf }: { inf: Informe }) {
         )}
       </div>
       <span className="self-center whitespace-nowrap font-mono text-[12px] text-oep-ink/60 transition-colors group-hover:text-oep-emerald">
-        PDF ↗
+        Leer →
       </span>
     </a>
   );
 }
 
 export default function Informes() {
-  const destacado = INFORMES.find((i) => i.destacado);
-  const resto = INFORMES.filter((i) => !i.destacado);
+  const [destacado, ...resto] = REPORTS;
 
   return (
     <>
@@ -69,7 +52,7 @@ export default function Informes() {
             resto del sitio.
           </PageHeader>
 
-          {INFORMES.length === 0 ? (
+          {REPORTS.length === 0 ? (
             <div className="mt-10 border-t border-oep-line">
               <div className="max-w-2xl border-b border-oep-line py-10">
                 <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-oep-ink/55">

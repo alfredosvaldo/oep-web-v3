@@ -1,0 +1,290 @@
+periodo,serie,valor
+2021-T2,Antofagasta,24
+2021-T2,Arica y Parinacota,3
+2021-T2,Atacama,14
+2021-T2,Aysén,4
+2021-T2,Biobío,17
+2021-T2,Coquimbo,14
+2021-T2,Dirección Ejecutiva,4
+2021-T2,La Araucanía,17
+2021-T2,Libertador General Bernardo O'Higgins,21
+2021-T2,Los Lagos,20
+2021-T2,Los Ríos,4
+2021-T2,Magallanes y Antártica Chilena,10
+2021-T2,Maule,28
+2021-T2,Metropolitana,45
+2021-T2,Tarapacá,10
+2021-T2,Valparaíso,19
+2021-T2,Ñuble,14
+2021-T3,Antofagasta,12
+2021-T3,Arica y Parinacota,1
+2021-T3,Atacama,11
+2021-T3,Aysén,3
+2021-T3,Biobío,15
+2021-T3,Coquimbo,6
+2021-T3,Dirección Ejecutiva,1
+2021-T3,La Araucanía,4
+2021-T3,Libertador General Bernardo O'Higgins,6
+2021-T3,Los Lagos,5
+2021-T3,Los Ríos,5
+2021-T3,Magallanes y Antártica Chilena,2
+2021-T3,Maule,5
+2021-T3,Metropolitana,36
+2021-T3,Tarapacá,5
+2021-T3,Valparaíso,12
+2021-T3,Ñuble,5
+2021-T4,Antofagasta,8
+2021-T4,Arica y Parinacota,0
+2021-T4,Atacama,8
+2021-T4,Aysén,2
+2021-T4,Biobío,9
+2021-T4,Coquimbo,4
+2021-T4,Dirección Ejecutiva,1
+2021-T4,La Araucanía,6
+2021-T4,Libertador General Bernardo O'Higgins,18
+2021-T4,Los Lagos,12
+2021-T4,Los Ríos,2
+2021-T4,Magallanes y Antártica Chilena,2
+2021-T4,Maule,13
+2021-T4,Metropolitana,39
+2021-T4,Tarapacá,4
+2021-T4,Valparaíso,7
+2021-T4,Ñuble,3
+2022-T1,Antofagasta,10
+2022-T1,Arica y Parinacota,3
+2022-T1,Atacama,4
+2022-T1,Aysén,5
+2022-T1,Biobío,15
+2022-T1,Coquimbo,1
+2022-T1,Dirección Ejecutiva,7
+2022-T1,La Araucanía,6
+2022-T1,Libertador General Bernardo O'Higgins,8
+2022-T1,Los Lagos,10
+2022-T1,Los Ríos,0
+2022-T1,Magallanes y Antártica Chilena,8
+2022-T1,Maule,10
+2022-T1,Metropolitana,29
+2022-T1,Tarapacá,6
+2022-T1,Valparaíso,16
+2022-T1,Ñuble,4
+2022-T2,Antofagasta,7
+2022-T2,Arica y Parinacota,0
+2022-T2,Atacama,6
+2022-T2,Aysén,2
+2022-T2,Biobío,8
+2022-T2,Coquimbo,6
+2022-T2,Dirección Ejecutiva,2
+2022-T2,La Araucanía,9
+2022-T2,Libertador General Bernardo O'Higgins,11
+2022-T2,Los Lagos,8
+2022-T2,Los Ríos,3
+2022-T2,Magallanes y Antártica Chilena,4
+2022-T2,Maule,8
+2022-T2,Metropolitana,27
+2022-T2,Tarapacá,4
+2022-T2,Valparaíso,14
+2022-T2,Ñuble,5
+2022-T3,Antofagasta,6
+2022-T3,Arica y Parinacota,7
+2022-T3,Atacama,1
+2022-T3,Aysén,6
+2022-T3,Biobío,5
+2022-T3,Coquimbo,11
+2022-T3,Dirección Ejecutiva,3
+2022-T3,La Araucanía,6
+2022-T3,Libertador General Bernardo O'Higgins,9
+2022-T3,Los Lagos,6
+2022-T3,Los Ríos,2
+2022-T3,Magallanes y Antártica Chilena,16
+2022-T3,Maule,10
+2022-T3,Metropolitana,32
+2022-T3,Tarapacá,2
+2022-T3,Valparaíso,12
+2022-T3,Ñuble,4
+2022-T4,Antofagasta,11
+2022-T4,Arica y Parinacota,1
+2022-T4,Atacama,4
+2022-T4,Aysén,3
+2022-T4,Biobío,5
+2022-T4,Coquimbo,3
+2022-T4,Dirección Ejecutiva,3
+2022-T4,La Araucanía,1
+2022-T4,Libertador General Bernardo O'Higgins,8
+2022-T4,Los Lagos,4
+2022-T4,Los Ríos,2
+2022-T4,Magallanes y Antártica Chilena,6
+2022-T4,Maule,13
+2022-T4,Metropolitana,20
+2022-T4,Tarapacá,3
+2022-T4,Valparaíso,12
+2022-T4,Ñuble,9
+2023-T1,Antofagasta,13
+2023-T1,Arica y Parinacota,1
+2023-T1,Atacama,7
+2023-T1,Aysén,1
+2023-T1,Biobío,9
+2023-T1,Coquimbo,3
+2023-T1,Dirección Ejecutiva,3
+2023-T1,La Araucanía,4
+2023-T1,Libertador General Bernardo O'Higgins,10
+2023-T1,Los Lagos,6
+2023-T1,Los Ríos,0
+2023-T1,Magallanes y Antártica Chilena,3
+2023-T1,Maule,9
+2023-T1,Metropolitana,20
+2023-T1,Tarapacá,2
+2023-T1,Valparaíso,11
+2023-T1,Ñuble,11
+2023-T2,Antofagasta,9
+2023-T2,Arica y Parinacota,0
+2023-T2,Atacama,5
+2023-T2,Aysén,3
+2023-T2,Biobío,11
+2023-T2,Coquimbo,4
+2023-T2,Dirección Ejecutiva,2
+2023-T2,La Araucanía,3
+2023-T2,Libertador General Bernardo O'Higgins,20
+2023-T2,Los Lagos,7
+2023-T2,Los Ríos,3
+2023-T2,Magallanes y Antártica Chilena,8
+2023-T2,Maule,14
+2023-T2,Metropolitana,19
+2023-T2,Tarapacá,0
+2023-T2,Valparaíso,9
+2023-T2,Ñuble,3
+2023-T3,Antofagasta,13
+2023-T3,Arica y Parinacota,0
+2023-T3,Atacama,6
+2023-T3,Aysén,1
+2023-T3,Biobío,5
+2023-T3,Coquimbo,4
+2023-T3,Dirección Ejecutiva,0
+2023-T3,La Araucanía,4
+2023-T3,Libertador General Bernardo O'Higgins,11
+2023-T3,Los Lagos,12
+2023-T3,Los Ríos,7
+2023-T3,Magallanes y Antártica Chilena,1
+2023-T3,Maule,16
+2023-T3,Metropolitana,23
+2023-T3,Tarapacá,1
+2023-T3,Valparaíso,13
+2023-T3,Ñuble,2
+2023-T4,Antofagasta,8
+2023-T4,Arica y Parinacota,2
+2023-T4,Atacama,10
+2023-T4,Aysén,0
+2023-T4,Biobío,9
+2023-T4,Coquimbo,7
+2023-T4,Dirección Ejecutiva,4
+2023-T4,La Araucanía,5
+2023-T4,Libertador General Bernardo O'Higgins,6
+2023-T4,Los Lagos,11
+2023-T4,Los Ríos,3
+2023-T4,Magallanes y Antártica Chilena,6
+2023-T4,Maule,12
+2023-T4,Metropolitana,24
+2023-T4,Tarapacá,5
+2023-T4,Valparaíso,18
+2023-T4,Ñuble,5
+2024-T1,Antofagasta,6
+2024-T1,Arica y Parinacota,1
+2024-T1,Atacama,9
+2024-T1,Aysén,0
+2024-T1,Biobío,6
+2024-T1,Coquimbo,3
+2024-T1,Dirección Ejecutiva,4
+2024-T1,La Araucanía,2
+2024-T1,Libertador General Bernardo O'Higgins,6
+2024-T1,Los Lagos,15
+2024-T1,Los Ríos,1
+2024-T1,Magallanes y Antártica Chilena,1
+2024-T1,Maule,7
+2024-T1,Metropolitana,23
+2024-T1,Tarapacá,4
+2024-T1,Valparaíso,12
+2024-T1,Ñuble,5
+2024-T2,Antofagasta,11
+2024-T2,Arica y Parinacota,3
+2024-T2,Atacama,8
+2024-T2,Aysén,2
+2024-T2,Biobío,4
+2024-T2,Coquimbo,4
+2024-T2,Dirección Ejecutiva,5
+2024-T2,La Araucanía,6
+2024-T2,Libertador General Bernardo O'Higgins,15
+2024-T2,Los Lagos,13
+2024-T2,Los Ríos,7
+2024-T2,Magallanes y Antártica Chilena,3
+2024-T2,Maule,10
+2024-T2,Metropolitana,25
+2024-T2,Tarapacá,1
+2024-T2,Valparaíso,11
+2024-T2,Ñuble,2
+2024-T3,Antofagasta,11
+2024-T3,Arica y Parinacota,1
+2024-T3,Atacama,7
+2024-T3,Aysén,2
+2024-T3,Biobío,10
+2024-T3,Coquimbo,8
+2024-T3,Dirección Ejecutiva,3
+2024-T3,La Araucanía,1
+2024-T3,Libertador General Bernardo O'Higgins,9
+2024-T3,Los Lagos,12
+2024-T3,Los Ríos,3
+2024-T3,Magallanes y Antártica Chilena,2
+2024-T3,Maule,14
+2024-T3,Metropolitana,21
+2024-T3,Tarapacá,4
+2024-T3,Valparaíso,14
+2024-T3,Ñuble,6
+2024-T4,Antofagasta,12
+2024-T4,Arica y Parinacota,0
+2024-T4,Atacama,9
+2024-T4,Aysén,2
+2024-T4,Biobío,5
+2024-T4,Coquimbo,5
+2024-T4,Dirección Ejecutiva,3
+2024-T4,La Araucanía,2
+2024-T4,Libertador General Bernardo O'Higgins,19
+2024-T4,Los Lagos,11
+2024-T4,Los Ríos,0
+2024-T4,Magallanes y Antártica Chilena,2
+2024-T4,Maule,12
+2024-T4,Metropolitana,26
+2024-T4,Tarapacá,2
+2024-T4,Valparaíso,11
+2024-T4,Ñuble,3
+2025-T1,Antofagasta,11
+2025-T1,Arica y Parinacota,1
+2025-T1,Atacama,10
+2025-T1,Aysén,4
+2025-T1,Biobío,6
+2025-T1,Coquimbo,9
+2025-T1,Dirección Ejecutiva,1
+2025-T1,La Araucanía,3
+2025-T1,Libertador General Bernardo O'Higgins,11
+2025-T1,Los Lagos,10
+2025-T1,Los Ríos,4
+2025-T1,Magallanes y Antártica Chilena,6
+2025-T1,Maule,11
+2025-T1,Metropolitana,10
+2025-T1,Tarapacá,4
+2025-T1,Valparaíso,13
+2025-T1,Ñuble,9
+2025-T2,Antofagasta,5
+2025-T2,Arica y Parinacota,2
+2025-T2,Atacama,4
+2025-T2,Aysén,1
+2025-T2,Biobío,5
+2025-T2,Coquimbo,3
+2025-T2,Dirección Ejecutiva,5
+2025-T2,La Araucanía,1
+2025-T2,Libertador General Bernardo O'Higgins,14
+2025-T2,Los Lagos,9
+2025-T2,Los Ríos,0
+2025-T2,Magallanes y Antártica Chilena,4
+2025-T2,Maule,6
+2025-T2,Metropolitana,21
+2025-T2,Tarapacá,6
+2025-T2,Valparaíso,7
+2025-T2,Ñuble,4

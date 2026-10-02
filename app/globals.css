@@ -218,3 +218,67 @@ button:disabled {opacity:.45;cursor:not-allowed;}
  .private-section-label { display:none; }
  .private-header .atlas-button { margin-left:auto; }
 }
+
+/* ------------------------------------------------------------------ */
+/* Informe trimestral: pantalla + PDF (A4) con portada y pie de página. */
+/* ------------------------------------------------------------------ */
+.print-cover, .como-print, .print-resumen-title { display: none; }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm 18mm 24mm;
+    @bottom-left  { content: "OEP · Informe trimestral"; font: 8pt ui-monospace, Menlo, monospace; color: #6b7280; vertical-align: top; padding-top: 6mm; }
+    @bottom-right { content: counter(page); font: 8pt ui-monospace, Menlo, monospace; color: #6b7280; vertical-align: top; padding-top: 6mm; }
+  }
+  @page :first {
+    margin: 0;
+    @bottom-left  { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  html, body { background: #fff !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  header, footer, .no-print { display: none !important; }
+  main { min-height: 0 !important; }
+  main > div { max-width: none !important; padding: 0 !important; }
+  main > div > div { display: block !important; margin-top: 0 !important; }
+  details { display: none !important; }
+
+  /* Portada a página completa, sin márgenes */
+  .print-cover {
+    display: flex; flex-direction: column; justify-content: space-between;
+    width: 210mm; height: 296mm; box-sizing: border-box; padding: 24mm 22mm 18mm;
+    background: #121A26; color: #F7F8F5; break-after: page;
+  }
+  .print-cover__top { display: flex; align-items: center; gap: 14px; color: #F7F8F5; }
+  .print-cover__brand { font: 700 26px/1 var(--font-space-grotesk), sans-serif; letter-spacing: -0.01em; }
+  .print-cover__sub { margin-top: 6px; font: 600 9px/1 var(--font-inter), sans-serif; letter-spacing: .2em; text-transform: uppercase; opacity: .65; }
+  .print-cover__main { border-left: 3px solid #C2703D; padding-left: 8mm; }
+  .print-cover__kicker { font: 500 11px/1 var(--font-plexmono), monospace; letter-spacing: .14em; text-transform: uppercase; color: #E8A87C; }
+  .print-cover h1 { margin-top: 10mm; font: 600 64px/1.02 var(--font-space-grotesk), sans-serif; letter-spacing: -0.025em; }
+  .print-cover__lede { margin-top: 8mm; max-width: 118mm; font: 400 17px/1.55 var(--font-inter), sans-serif; opacity: .82; }
+  .print-cover__kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
+  .print-cover__kpis > div { padding: 5mm 4mm 0 0; }
+  .print-cover__kpis dt { font: 500 8px/1.35 var(--font-plexmono), monospace; letter-spacing: .1em; text-transform: uppercase; opacity: .6; }
+  .print-cover__kpis dd { margin-top: 2mm; font: 600 15px/1.2 var(--font-space-grotesk), sans-serif; white-space: nowrap; }
+  .print-cover__foot { margin-top: 10mm; font: 400 9px/1 var(--font-plexmono), monospace; letter-spacing: .08em; opacity: .55; }
+
+  /* Interior: una sección por página, figuras enteras, método visible */
+  .print-resumen-title { display: block; font: 600 26px/1.1 var(--font-space-grotesk), sans-serif; letter-spacing: -0.02em; margin-bottom: 8mm; }
+  .report-section { break-before: page; border-top: 0 !important; padding-top: 0 !important; }
+  #notas { break-before: auto; margin-top: 12mm; }
+  .report-section h2 { font-size: 23px; line-height: 1.2; break-after: avoid; }
+  .report-chart { break-inside: avoid; margin: 7mm 0 !important; }
+  .report-chart > div[role="img"] { max-width: 100%; height: var(--alt-print, 245px) !important; }
+  .report-trio { display: grid !important; grid-template-columns: repeat(3, 1fr); column-gap: 5mm; }
+  .report-trio .report-chart figcaption span span { font-size: 12px; }
+  .report-kpis { grid-template-columns: repeat(5, 1fr) !important; }
+  .report-kpis > div { padding: 3mm 2.5mm !important; }
+  .report-kpis dt { font-size: 7.5px !important; }
+  .report-kpis dd.oep-headline { font-size: 14px !important; line-height: 1.25 !important; white-space: nowrap; }
+  .como-print { display: block; margin-top: 3mm; padding-left: 4mm; border-left: 2px solid #C2703D; font-size: 11.5px; line-height: 1.5; color: rgba(27,34,51,.72); max-width: none; }
+  .como-print span { font: 500 9px/1 var(--font-plexmono), monospace; letter-spacing: .12em; text-transform: uppercase; color: #9A5830; }
+  .max-w-prose { max-width: none !important; }
+  p, li { orphans: 3; widows: 3; }
+}
