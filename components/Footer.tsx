@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
+import { CORTE } from '@/lib/corte';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
             <p className="oep-label text-oep-ink/55">Fuente</p>
             <p className="mt-3 text-oep-ink/70">
               Servicio de Evaluación Ambiental (SEA): Sistema de Evaluación de Impacto Ambiental,
-              presentaciones 1993–2026-T2.
+              presentaciones {CORTE.rango}.
             </p>
           </div>
           <div className="text-[14px] leading-6">
@@ -33,8 +34,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-oep-line py-5 font-mono text-[11px] text-oep-ink/50">
-          <p>OEP · Observatorio Económico de Permisos — datos SEIA 1993–2026-T2</p>
-          <p className="tabular">Última actualización: 30.06.2026</p>
+          <p>OEP · Observatorio Económico de Permisos — datos SEIA {CORTE.rango}</p>
+          <p className="tabular">Última actualización: {CORTE.fecha}</p>
         </div>
       </div>
     </footer>

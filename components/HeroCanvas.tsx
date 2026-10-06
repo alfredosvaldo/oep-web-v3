@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { fetchChileOutline, fetchGeoPoints, VISTA_BBOX } from '@/lib/geo';
 import { fmtInt } from '@/lib/format';
+import { CORTE } from '@/lib/corte';
 
 // Paleta pensada para el campo de datos oscuro (bg-oep-slate): retícula y
 // partículas neutras en un blanco apagado, estados de aprobación en color.
@@ -306,7 +307,7 @@ export default function HeroCanvas() {
         <canvas ref={canvasRef} className="block h-full w-full" />
       </div>
       <p className="pointer-events-none absolute left-6 top-6 font-mono text-[11px] uppercase tracking-[0.18em] text-white/45 lg:left-10 lg:top-8">
-        Expedientes SEIA · 1993–2026-T2
+        Expedientes SEIA · {CORTE.rango}
       </p>
       {anio !== null && (
         <div className="pointer-events-none absolute bottom-6 left-6 max-w-[48%] lg:bottom-8 lg:left-10">

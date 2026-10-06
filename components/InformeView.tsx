@@ -29,13 +29,22 @@ function kpis(slug: string) {
   const eia = serie(slug, 'fig04_dias_tipo.csv', 'EIA');
   const u = (a: number[]) => a[a.length - 1];
   const p = (a: number[]) => a[a.length - 2];
-  return [
+  const mil = (v: number) => `${nf0.format(Math.round(v / 1000))} mil`;
+  const out = [
     { label: 'Proyectos ingresados', valor: nf0.format(u(ing)), delta: `${pct(u(ing), p(ing))} vs trimestre anterior` },
     { label: 'Inversión ingresada', valor: `US$ ${nf0.format(u(inv))} MM`, delta: pct(u(inv), p(inv)) },
     { label: 'Inversión calificada', valor: `US$ ${nf0.format(u(cal))} MM`, delta: `${pct(u(cal), p(cal))}${u(cal) >= Math.max(...cal) ? ' · máximo de la serie' : ''}` },
     { label: 'Días promedio de tramitación', valor: nf0.format(u(dias)), delta: dif(u(dias), p(dias)) },
     { label: 'EIA: días promedio', valor: nf0.format(u(eia)), delta: `${nf1.format(u(eia) / 180)}× el plazo legal` },
   ];
+  // Empleo declarado pendiente (solo informes con sección de empleo): etapas de fig17b en orden calificación → RCA sin obras.
+  if (fs.existsSync(path.join(process.cwd(), 'public/data/informes', slug, 'fig17b_empleo_pendiente.csv'))) {
+    const t = fs.readFileSync(path.join(process.cwd(), 'public/data/informes', slug, 'fig17b_empleo_pendiente.csv'), 'utf8').trim().split('\n').slice(1).map((l) => l.split(','));
+    const calif = Number(t.find((r) => r[0].startsWith('En calif'))?.[2]);
+    const rca = Number(t.find((r) => r[0].startsWith('Con RCA'))?.[2]);
+    out.push({ label: 'Empleo declarado con RCA, sin obras', valor: mil(rca), delta: `+${mil(calif)} aún en calificación` });
+  }
+  return out;
 }
 
 function Seccion({ id, kicker, titulo, children }: { id: string; kicker: string; titulo: string; children: React.ReactNode }) {
@@ -75,11 +84,19 @@ function Como({ children }: { children: React.ReactNode }) {
 export default function InformeView({ informe }: { informe: Informe }) {
   const slug = informe.slug;
   const K = kpis(slug);
+  // Figuras numeradas en orden de aparición dentro de este informe; el panel triple lleva a/b/c.
+  const numero: Record<string, string> = {};
+  let c = 0;
+  for (const sec of informe.secciones)
+    for (const b of sec.bloques) {
+      if (b.figs.length === 3) { c += 1; b.figs.forEach((k, i) => (numero[k] = `${c}${'abc'[i]}`)); }
+      else b.figs.forEach((k) => (numero[k] = String(++c)));
+    }
   const chart = (key: string, extra: Partial<{ anchoPrint: number }> = {}) => {
     const f: Fig = FIGS[key];
     return (
       <ReportChart
-        key={key} src={`${slug}/${f.file}`} n={f.n} titulo={f.titulo} tipo={f.tipo} unidad={f.unidad} altura={f.altura} max={f.max}
+        key={key} src={`${slug}/${f.file}`} n={numero[key] ?? f.n} titulo={f.titulo} tipo={f.tipo} unidad={f.unidad} altura={f.altura} max={f.max}
         refLinea={f.refLinea} refTexto={f.refTexto} fuente={f.fuente ? FUENTE[f.fuente] : undefined} {...extra}
       />
     );
@@ -105,7 +122,7 @@ export default function InformeView({ informe }: { informe: Informe }) {
           <h1>Cierre {informe.periodo}</h1>
           <p className="print-cover__lede">{informe.lede}</p>
         </div>
-        <dl className="print-cover__kpis">
+        <dl className="print-cover__kpis" style={{ ['--cols' as string]: K.length }}>
           {K.map((k) => (
             <div key={k.label}><dt>{k.label}</dt><dd>{k.valor}</dd></div>
           ))}
@@ -134,7 +151,7 @@ export default function InformeView({ informe }: { informe: Informe }) {
             <div className="min-w-0 space-y-14">
               <section aria-label="Resumen">
                 <h2 className="print-resumen-title">Resumen ejecutivo</h2>
-                <dl className="report-kpis grid grid-cols-2 gap-px border border-oep-line bg-oep-line md:grid-cols-5">
+                <dl className="report-kpis kpi-grid grid gap-px border border-oep-line bg-oep-line" style={{ ['--cols' as string]: K.length }}>
                   {K.map((k) => (
                     <div key={k.label} className="bg-oep-paper p-4">
                       <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-oep-ink/55">{k.label}</dt>

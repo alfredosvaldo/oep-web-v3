@@ -30,7 +30,7 @@ function search(index: SearchIndex, q: string): Hit[] {
 
 /**
  * Buscador del hero (estilo terminal de inteligencia): proyectos, titulares y
- * regiones de los 30.119 expedientes. El índice se carga al primer foco; el
+ * regiones de los expedientes. El índice se carga al primer foco; el
  * resultado abre la ficha oficial en el SEA.
  */
 export default function HeroSearch() {

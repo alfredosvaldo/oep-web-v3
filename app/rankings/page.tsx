@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
 import { fetchAgg, type AggItem } from '@/lib/kpis';
 import { fmtInt, fmtMM, fmtPct1 } from '@/lib/format';
+import { CORTE } from '@/lib/corte';
 
 type Dim = 'region' | 'sector' | 'titular' | 'tipologia' | 'estado';
 
@@ -86,7 +87,7 @@ export default function Rankings() {
           <PageHeader
             kicker="Rankings"
             titulo="Quién concentra la inversión evaluada"
-            meta="1993–2026-T2 · ordena cualquier columna"
+            meta={`${CORTE.rango} · ordena cualquier columna`}
           >
             Los mismos datos del mapa, tabulados por región, sector, titular, tipología y estado.
           </PageHeader>
@@ -208,7 +209,7 @@ export default function Rankings() {
           )}
 
           <p className="oep-source mt-4 border-t border-oep-line pt-3">
-            Fuente: SEA · Estado al 30.06.2026. Cálculos OEP. Tasa de aprobación = RCA favorable / calificados con RCA. Mediana de días
+            Fuente: SEA · Estado al {CORTE.fecha}. Cálculos OEP. Tasa de aprobación = RCA favorable / calificados con RCA. Mediana de días
             presentación → calificación, por dimensión. Denominadores y alcance disponibles en la comparación.
           </p>
         </div>

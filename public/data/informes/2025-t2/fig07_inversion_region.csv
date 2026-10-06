@@ -5,7 +5,7 @@ periodo,serie,valor
 2021-T2,Aysén,51.89722
 2021-T2,Biobío,353.838424
 2021-T2,Coquimbo,1109.9723040000001
-2021-T2,Dirección Ejecutiva,955.7
+2021-T2,Interregional,955.7
 2021-T2,La Araucanía,286.02837
 2021-T2,Libertador General Bernardo O'Higgins,300.12658
 2021-T2,Los Lagos,130.162324
@@ -22,7 +22,7 @@ periodo,serie,valor
 2021-T3,Aysén,60.350695
 2021-T3,Biobío,484.51102
 2021-T3,Coquimbo,389.716
-2021-T3,Dirección Ejecutiva,9.72
+2021-T3,Interregional,9.72
 2021-T3,La Araucanía,62.399588
 2021-T3,Libertador General Bernardo O'Higgins,36.15
 2021-T3,Los Lagos,4.894017
@@ -39,7 +39,7 @@ periodo,serie,valor
 2021-T4,Aysén,53.788442
 2021-T4,Biobío,30.05481
 2021-T4,Coquimbo,9.76415
-2021-T4,Dirección Ejecutiva,9.72
+2021-T4,Interregional,9.72
 2021-T4,La Araucanía,93.172014
 2021-T4,Libertador General Bernardo O'Higgins,513.4983869999999
 2021-T4,Los Lagos,158.37695699999998
@@ -56,7 +56,7 @@ periodo,serie,valor
 2022-T1,Aysén,58.578239999999994
 2022-T1,Biobío,84.7
 2022-T1,Coquimbo,0.25
-2022-T1,Dirección Ejecutiva,769.1500000000001
+2022-T1,Interregional,769.1500000000001
 2022-T1,La Araucanía,66.251
 2022-T1,Libertador General Bernardo O'Higgins,64.390202
 2022-T1,Los Lagos,201.15792299999998
@@ -73,7 +73,7 @@ periodo,serie,valor
 2022-T2,Aysén,9.5311
 2022-T2,Biobío,469.09013500000003
 2022-T2,Coquimbo,279.419406
-2022-T2,Dirección Ejecutiva,165
+2022-T2,Interregional,165
 2022-T2,La Araucanía,200.9325
 2022-T2,Libertador General Bernardo O'Higgins,483.63198100000005
 2022-T2,Los Lagos,705.5855999999999
@@ -90,7 +90,7 @@ periodo,serie,valor
 2022-T3,Aysén,20.4
 2022-T3,Biobío,67.298123
 2022-T3,Coquimbo,613.8539999999999
-2022-T3,Dirección Ejecutiva,144.46451399999998
+2022-T3,Interregional,144.46451399999998
 2022-T3,La Araucanía,212.989887
 2022-T3,Libertador General Bernardo O'Higgins,264.35286299999996
 2022-T3,Los Lagos,66.3095
@@ -107,7 +107,7 @@ periodo,serie,valor
 2022-T4,Aysén,29.233014
 2022-T4,Biobío,654.029613
 2022-T4,Coquimbo,21.57
-2022-T4,Dirección Ejecutiva,71
+2022-T4,Interregional,71
 2022-T4,La Araucanía,7e-5
 2022-T4,Libertador General Bernardo O'Higgins,45.571
 2022-T4,Los Lagos,49.799865
@@ -124,7 +124,7 @@ periodo,serie,valor
 2023-T1,Aysén,5.603974
 2023-T1,Biobío,130.310222
 2023-T1,Coquimbo,91.375
-2023-T1,Dirección Ejecutiva,232.03
+2023-T1,Interregional,232.03
 2023-T1,La Araucanía,93.48483
 2023-T1,Libertador General Bernardo O'Higgins,220.398456
 2023-T1,Los Lagos,53.314046000000005
@@ -141,7 +141,7 @@ periodo,serie,valor
 2023-T2,Aysén,23.207948000000002
 2023-T2,Biobío,1119.792108
 2023-T2,Coquimbo,46.412971999999996
-2023-T2,Dirección Ejecutiva,10.2
+2023-T2,Interregional,10.2
 2023-T2,La Araucanía,18.407756
 2023-T2,Libertador General Bernardo O'Higgins,231.094997
 2023-T2,Los Lagos,301.466398
@@ -158,7 +158,7 @@ periodo,serie,valor
 2023-T3,Aysén,2.2
 2023-T3,Biobío,46.039410000000004
 2023-T3,Coquimbo,584.08845
-2023-T3,Dirección Ejecutiva,0
+2023-T3,Interregional,0
 2023-T3,La Araucanía,36.73720000000001
 2023-T3,Libertador General Bernardo O'Higgins,439.006704
 2023-T3,Los Lagos,376.823869
@@ -175,7 +175,7 @@ periodo,serie,valor
 2023-T4,Aysén,0
 2023-T4,Biobío,527.723312
 2023-T4,Coquimbo,242.78000000000003
-2023-T4,Dirección Ejecutiva,1651.107896
+2023-T4,Interregional,1651.107896
 2023-T4,La Araucanía,194.05765999999997
 2023-T4,Libertador General Bernardo O'Higgins,117.354372
 2023-T4,Los Lagos,373.23143
@@ -192,7 +192,7 @@ periodo,serie,valor
 2024-T1,Aysén,0
 2024-T1,Biobío,350.971984
 2024-T1,Coquimbo,121.25
-2024-T1,Dirección Ejecutiva,678.0875
+2024-T1,Interregional,678.0875
 2024-T1,La Araucanía,72.817518
 2024-T1,Libertador General Bernardo O'Higgins,167.618863
 2024-T1,Los Lagos,1192.1344130000002
@@ -209,7 +209,7 @@ periodo,serie,valor
 2024-T2,Aysén,4.2
 2024-T2,Biobío,168.6
 2024-T2,Coquimbo,578.8610100000001
-2024-T2,Dirección Ejecutiva,1162.6
+2024-T2,Interregional,1162.6
 2024-T2,La Araucanía,243.748429
 2024-T2,Libertador General Bernardo O'Higgins,416.31603
 2024-T2,Los Lagos,545.9368000000001
@@ -226,7 +226,7 @@ periodo,serie,valor
 2024-T3,Aysén,7.640979
 2024-T3,Biobío,392.21099999999996
 2024-T3,Coquimbo,201.67133800000002
-2024-T3,Dirección Ejecutiva,209.75672
+2024-T3,Interregional,209.75672
 2024-T3,La Araucanía,10.7
 2024-T3,Libertador General Bernardo O'Higgins,158.734232
 2024-T3,Los Lagos,58.0148
@@ -243,7 +243,7 @@ periodo,serie,valor
 2024-T4,Aysén,18.15
 2024-T4,Biobío,197.52464600000002
 2024-T4,Coquimbo,2780.439535
-2024-T4,Dirección Ejecutiva,1080
+2024-T4,Interregional,1080
 2024-T4,La Araucanía,43
 2024-T4,Libertador General Bernardo O'Higgins,1541.5484320000003
 2024-T4,Los Lagos,484.26848499999994
@@ -260,7 +260,7 @@ periodo,serie,valor
 2025-T1,Aysén,11.7
 2025-T1,Biobío,207.754749
 2025-T1,Coquimbo,1265.06
-2025-T1,Dirección Ejecutiva,447.6568
+2025-T1,Interregional,447.6568
 2025-T1,La Araucanía,35.802048
 2025-T1,Libertador General Bernardo O'Higgins,258.23927100000003
 2025-T1,Los Lagos,294.045581
@@ -277,7 +277,7 @@ periodo,serie,valor
 2025-T2,Aysén,3.335969
 2025-T2,Biobío,43.112725
 2025-T2,Coquimbo,184.50074
-2025-T2,Dirección Ejecutiva,2047.6568
+2025-T2,Interregional,2047.6568
 2025-T2,La Araucanía,31.131
 2025-T2,Libertador General Bernardo O'Higgins,880.7845149999999
 2025-T2,Los Lagos,1054.97898

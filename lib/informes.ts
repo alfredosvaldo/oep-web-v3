@@ -36,6 +36,9 @@ export const FIGS: Record<string, Fig> = {
   f12a: { file: 'fig12a_costo_funding100.csv', n: '12a', titulo: 'Funding 100%', tipo: 'stacked', unidad: 'US$ MM', altura: 280 },
   f12b: { file: 'fig12b_costo_funding50.csv', n: '12b', titulo: 'Funding 50% (base)', tipo: 'stacked', unidad: 'US$ MM', altura: 280 },
   f12c: { file: 'fig12c_costo_funding20.csv', n: '12c', titulo: 'Funding 20%', tipo: 'stacked', unidad: 'US$ MM', altura: 280 },
+  f17a: { file: 'fig17a_empleo_intensidad.csv', n: '17a', titulo: 'Intensidad de empleo declarada, por año de ingreso (trabajadores por US$ millón de 2026)', tipo: 'line', unidad: 'trab./US$ MM' },
+  f17b: { file: 'fig17b_empleo_pendiente.csv', n: '17b', titulo: 'Empleo declarado pendiente de materializar al cierre del trimestre', tipo: 'bar', unidad: 'trabajadores', altura: 300 },
+  f17c: { file: 'fig17c_empleo_materializacion.csv', n: '17c', titulo: 'Empleo declarado en proyectos que inician obras, por trimestre (corregido por cobertura)', tipo: 'bar', unidad: 'trabajadores' },
   f13: { file: 'fig13_costo_sectorial_cohorte.csv', n: '13', titulo: 'Costo sectorial por cohorte de RCA: realizado y latente (US$ MM)', tipo: 'stacked', unidad: 'US$ MM', fuente: 'sma' },
   f14: { file: 'fig14_dias_construccion.csv', n: '14', titulo: 'Días desde la RCA hasta el inicio de obras, por trimestre de inicio', tipo: 'line', unidad: 'días', fuente: 'sma' },
   f15: { file: 'fig15_costo_cohorte_inicio_obras.csv', n: '15', titulo: 'Costo total por cohorte de inicio de obras (US$ MM)', tipo: 'stacked', unidad: 'US$ MM', fuente: 'sma' },
@@ -81,11 +84,14 @@ export const COMO_TIEMPOS =
   'Días corridos entre presentación y calificación, solo proyectos aprobados o rechazados, promedio simple por trimestre de calificación. Las resoluciones incluyen todos los estados con fecha de calificación.';
 export const COMO_TERRITORIO =
   'Región normalizada (variantes de nombres unificadas). Concentración: participación del decil superior por monto, entre proyectos con inversión declarada.';
+export const COMO_EMPLEO =
+  'Dotación promedio declarada para la fase de construcción en la DIA o EIA: una proyección ex ante del titular, no empleo observado ni creación neta. Se descartan registros con más de 100 trabajadores por US$ millón (errores de extracción). Intensidad: mediana por año de ingreso, con inversión en US$ de 2026 (CPI-U de EE.UU.). Inicios de obra: hito informado a la SMA, con factor de expansión 3 por cobertura parcial del registro; los stocks se presentan observados.';
 export const COMO_COSTO =
-  'Costo = inversión × WACC diario sectorial × días. Costo legal: hasta 90 días (DIA) o 180 (EIA). Sobrecosto: hasta la mediana histórica del sector y tipo. Exceso: sobre esa mediana. «Funding» es la fracción de la inversión que se considera inmovilizada.';
+  'Costo = inversión × WACC diario sectorial × días. Costo legal: hasta 90 días (DIA) o 180 (EIA). Sobrecosto: hasta la mediana histórica del sector y tipo. Exceso: sobre esa mediana. «Funding» es la fracción de la inversión que se considera inmovilizada. Metodología elaborada junto con SOFOFA.';
 
 export const NOTA_RECALCULO =
   'Los gráficos se recalcularon con el mismo método en todos los informes, a partir de la base depurada de cada trimestre; por eso pueden diferir levemente de lo publicado en su día.';
+export const NOTA_SOFOFA = 'La metodología de costo de la tramitación fue elaborada junto con SOFOFA.';
 export const NOTA_ESTIMACIONES = 'Estimaciones ex ante de los titulares; no son contrataciones ni inversión ejecutada.';
 export const NOTA_DESCARGA = 'Cada gráfico se puede ver como tabla y descargar en CSV o PNG.';
 export const NOTA_ORIGINAL = 'El informe original del observatorio incluía además secciones de empleo y de percepción de expertos, que no se reproducen aquí.';
@@ -140,6 +146,7 @@ export const REPORTS: Informe[] = [
       NOTA_RECALCULO,
       'En 2025-T2 el promedio de días recalculado es 464, frente a unos 440 en el informe original.',
       'El informe original incluía además una sección de costo de la tramitación, que no se reproduce aquí.',
+      NOTA_SOFOFA,
       NOTA_ESTIMACIONES,
       NOTA_DESCARGA,
     ],

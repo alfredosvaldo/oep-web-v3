@@ -5,7 +5,7 @@ periodo,serie,valor
 2021-T2,Aysén,4
 2021-T2,Biobío,17
 2021-T2,Coquimbo,14
-2021-T2,Dirección Ejecutiva,4
+2021-T2,Interregional,4
 2021-T2,La Araucanía,17
 2021-T2,Libertador General Bernardo O'Higgins,21
 2021-T2,Los Lagos,20
@@ -22,7 +22,7 @@ periodo,serie,valor
 2021-T3,Aysén,3
 2021-T3,Biobío,15
 2021-T3,Coquimbo,6
-2021-T3,Dirección Ejecutiva,1
+2021-T3,Interregional,1
 2021-T3,La Araucanía,4
 2021-T3,Libertador General Bernardo O'Higgins,6
 2021-T3,Los Lagos,5
@@ -39,7 +39,7 @@ periodo,serie,valor
 2021-T4,Aysén,2
 2021-T4,Biobío,9
 2021-T4,Coquimbo,4
-2021-T4,Dirección Ejecutiva,1
+2021-T4,Interregional,1
 2021-T4,La Araucanía,6
 2021-T4,Libertador General Bernardo O'Higgins,18
 2021-T4,Los Lagos,12
@@ -56,7 +56,7 @@ periodo,serie,valor
 2022-T1,Aysén,5
 2022-T1,Biobío,15
 2022-T1,Coquimbo,1
-2022-T1,Dirección Ejecutiva,7
+2022-T1,Interregional,7
 2022-T1,La Araucanía,6
 2022-T1,Libertador General Bernardo O'Higgins,8
 2022-T1,Los Lagos,10
@@ -73,7 +73,7 @@ periodo,serie,valor
 2022-T2,Aysén,2
 2022-T2,Biobío,8
 2022-T2,Coquimbo,6
-2022-T2,Dirección Ejecutiva,2
+2022-T2,Interregional,2
 2022-T2,La Araucanía,9
 2022-T2,Libertador General Bernardo O'Higgins,11
 2022-T2,Los Lagos,8
@@ -90,7 +90,7 @@ periodo,serie,valor
 2022-T3,Aysén,6
 2022-T3,Biobío,5
 2022-T3,Coquimbo,11
-2022-T3,Dirección Ejecutiva,3
+2022-T3,Interregional,3
 2022-T3,La Araucanía,6
 2022-T3,Libertador General Bernardo O'Higgins,9
 2022-T3,Los Lagos,6
@@ -107,7 +107,7 @@ periodo,serie,valor
 2022-T4,Aysén,3
 2022-T4,Biobío,5
 2022-T4,Coquimbo,3
-2022-T4,Dirección Ejecutiva,3
+2022-T4,Interregional,3
 2022-T4,La Araucanía,1
 2022-T4,Libertador General Bernardo O'Higgins,8
 2022-T4,Los Lagos,4
@@ -124,7 +124,7 @@ periodo,serie,valor
 2023-T1,Aysén,1
 2023-T1,Biobío,9
 2023-T1,Coquimbo,3
-2023-T1,Dirección Ejecutiva,3
+2023-T1,Interregional,3
 2023-T1,La Araucanía,4
 2023-T1,Libertador General Bernardo O'Higgins,10
 2023-T1,Los Lagos,6
@@ -141,7 +141,7 @@ periodo,serie,valor
 2023-T2,Aysén,3
 2023-T2,Biobío,11
 2023-T2,Coquimbo,4
-2023-T2,Dirección Ejecutiva,2
+2023-T2,Interregional,2
 2023-T2,La Araucanía,3
 2023-T2,Libertador General Bernardo O'Higgins,20
 2023-T2,Los Lagos,7
@@ -158,7 +158,7 @@ periodo,serie,valor
 2023-T3,Aysén,1
 2023-T3,Biobío,5
 2023-T3,Coquimbo,4
-2023-T3,Dirección Ejecutiva,0
+2023-T3,Interregional,0
 2023-T3,La Araucanía,4
 2023-T3,Libertador General Bernardo O'Higgins,11
 2023-T3,Los Lagos,12
@@ -175,7 +175,7 @@ periodo,serie,valor
 2023-T4,Aysén,0
 2023-T4,Biobío,9
 2023-T4,Coquimbo,7
-2023-T4,Dirección Ejecutiva,4
+2023-T4,Interregional,4
 2023-T4,La Araucanía,5
 2023-T4,Libertador General Bernardo O'Higgins,6
 2023-T4,Los Lagos,11
@@ -192,7 +192,7 @@ periodo,serie,valor
 2024-T1,Aysén,0
 2024-T1,Biobío,6
 2024-T1,Coquimbo,3
-2024-T1,Dirección Ejecutiva,4
+2024-T1,Interregional,4
 2024-T1,La Araucanía,2
 2024-T1,Libertador General Bernardo O'Higgins,6
 2024-T1,Los Lagos,15
@@ -209,7 +209,7 @@ periodo,serie,valor
 2024-T2,Aysén,2
 2024-T2,Biobío,4
 2024-T2,Coquimbo,4
-2024-T2,Dirección Ejecutiva,5
+2024-T2,Interregional,5
 2024-T2,La Araucanía,6
 2024-T2,Libertador General Bernardo O'Higgins,15
 2024-T2,Los Lagos,13
@@ -226,7 +226,7 @@ periodo,serie,valor
 2024-T3,Aysén,2
 2024-T3,Biobío,10
 2024-T3,Coquimbo,8
-2024-T3,Dirección Ejecutiva,3
+2024-T3,Interregional,3
 2024-T3,La Araucanía,1
 2024-T3,Libertador General Bernardo O'Higgins,9
 2024-T3,Los Lagos,12
@@ -243,7 +243,7 @@ periodo,serie,valor
 2024-T4,Aysén,2
 2024-T4,Biobío,5
 2024-T4,Coquimbo,5
-2024-T4,Dirección Ejecutiva,3
+2024-T4,Interregional,3
 2024-T4,La Araucanía,2
 2024-T4,Libertador General Bernardo O'Higgins,19
 2024-T4,Los Lagos,11
@@ -260,7 +260,7 @@ periodo,serie,valor
 2025-T1,Aysén,4
 2025-T1,Biobío,6
 2025-T1,Coquimbo,9
-2025-T1,Dirección Ejecutiva,1
+2025-T1,Interregional,1
 2025-T1,La Araucanía,3
 2025-T1,Libertador General Bernardo O'Higgins,11
 2025-T1,Los Lagos,10
@@ -277,7 +277,7 @@ periodo,serie,valor
 2025-T2,Aysén,1
 2025-T2,Biobío,5
 2025-T2,Coquimbo,3
-2025-T2,Dirección Ejecutiva,5
+2025-T2,Interregional,5
 2025-T2,La Araucanía,1
 2025-T2,Libertador General Bernardo O'Higgins,14
 2025-T2,Los Lagos,9

@@ -10,7 +10,7 @@ const read=f=>JSON.parse(readFileSync(`public/data/${f}`,'utf8'));
 const index=read('atlas/index.json'), summary=read('atlas/summary.json'), lookup=read('atlas/lookup.json');
 const chunks=read('search/projects.json').files;
 const full=chunks.flatMap(file=>read(file));const byId=new Map(full.map(p=>[p.id,p]));
-assert.equal(index.rows.length,30119);assert.equal(new Set(index.rows.map(r=>r[0])).size,30119);
+assert.equal(index.rows.length,26695);assert.equal(new Set(index.rows.map(r=>r[0])).size,26695);
 const projects=index.rows.map(r=>{
  const src=byId.get(r[0]);assert.ok(src);assert.equal(src.m,r[5]);assert.equal(src.n,r[1]);assert.equal(src.fp,r[8]);assert.equal(src.fc,r[9]);assert.equal(src.dt,r[10]);assert.equal(src.lo,r[6]);assert.equal(src.la,r[7]);assert.equal(src.e,index.statuses[r[11]]);assert.equal(src.eg,index.groups[r[12]]);
  const rg=index.entities.region[r[2]],s=index.entities.sector[r[3]],ti=index.entities.titular[r[4]];
@@ -19,7 +19,7 @@ const projects=index.rows.map(r=>{
 });
 for(const file of chunks)for(const p of read(file))assert.equal(lookup[p.id],file);
 for(const [dim,list] of Object.entries(index.entities))assert.equal(new Set(list.map(e=>e.key)).size,list.length,`${dim}: unique entity keys`);
-const qualified=filterProjects(projects,DEFAULT);assert.equal(qualified.length,365);assert.equal(filterProjects(projects,{...DEFAULT,status:'evaluation'}).length,366);assert.equal(filterProjects(projects,{...DEFAULT,status:'approved'}).length,18625);assert.equal(metrics(projects).mapped,30117);assert.equal(summary.projects.length,365);
+const qualified=filterProjects(projects,DEFAULT);assert.equal(qualified.length,347);assert.equal(filterProjects(projects,{...DEFAULT,status:'evaluation'}).length,356);assert.equal(filterProjects(projects,{...DEFAULT,status:'approved'}).length,18640);assert.equal(metrics(projects).mapped,26695);assert.equal(summary.projects.length,347);
 assert.ok(Math.abs(metrics(qualified).investment-metrics(summary.projects).investment)<1e-7);
 for(const dim of ['region','sector','titular'])for(const entity of read(`agg/${dim}.json`).items){const list=filterProjects(projects,{...DEFAULT,status:'all',[dim]:entity.slug});const m=metrics(list);assert.equal(m.count,entity.proyectos,entity.nombre);assert.ok(Math.abs(m.investment-entity.inversion_mmu)<1e-6,entity.nombre);}
 assert.equal(normalize('Ñuble / Energía'),normalize('Nuble / energia'));

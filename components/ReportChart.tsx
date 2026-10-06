@@ -162,7 +162,7 @@ export default function ReportChart({
               ...common, type: 'line', smooth: false, symbol: 'circle', symbolSize: 6, showSymbol: false,
               lineStyle: { width: 2.6, color: c },
               // valor del último punto, directo sobre la línea
-              endLabel: { show: true, formatter: (p: { value: number | null }) => (p.value == null ? '' : nf0.format(p.value)), fontFamily: MONO, fontSize: 11, fontWeight: 600, color: c, distance: 6, offset: multi ? [0, ultimo(nombre) === maxUltimo ? -7 : 7] : [0, 0] },
+              endLabel: { show: true, formatter: (p: { value: number | null }) => (p.value == null ? '' : (Math.abs(p.value) < 20 ? nf : nf0).format(p.value)), fontFamily: MONO, fontSize: 11, fontWeight: 600, color: c, distance: 6, offset: multi ? [0, ultimo(nombre) === maxUltimo ? -7 : 7] : [0, 0] },
               emphasis: { focus: 'series', showSymbol: true },
             }
           : {

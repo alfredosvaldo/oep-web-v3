@@ -223,6 +223,8 @@ button:disabled {opacity:.45;cursor:not-allowed;}
 /* Informe trimestral: pantalla + PDF (A4) con portada y pie de página. */
 /* ------------------------------------------------------------------ */
 .print-cover, .como-print, .print-resumen-title { display: none; }
+.kpi-grid { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 768px) { .kpi-grid { grid-template-columns: repeat(var(--cols, 5), 1fr); } }
 
 @media print {
   @page {
@@ -258,7 +260,7 @@ button:disabled {opacity:.45;cursor:not-allowed;}
   .print-cover__kicker { font: 500 11px/1 var(--font-plexmono), monospace; letter-spacing: .14em; text-transform: uppercase; color: #E8A87C; }
   .print-cover h1 { margin-top: 10mm; font: 600 64px/1.02 var(--font-space-grotesk), sans-serif; letter-spacing: -0.025em; }
   .print-cover__lede { margin-top: 8mm; max-width: 118mm; font: 400 17px/1.55 var(--font-inter), sans-serif; opacity: .82; }
-  .print-cover__kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
+  .print-cover__kpis { display: grid; grid-template-columns: repeat(var(--cols, 5), 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.22); }
   .print-cover__kpis > div { padding: 5mm 4mm 0 0; }
   .print-cover__kpis dt { font: 500 8px/1.35 var(--font-plexmono), monospace; letter-spacing: .1em; text-transform: uppercase; opacity: .6; }
   .print-cover__kpis dd { margin-top: 2mm; font: 600 15px/1.2 var(--font-space-grotesk), sans-serif; white-space: nowrap; }
@@ -273,7 +275,7 @@ button:disabled {opacity:.45;cursor:not-allowed;}
   .report-chart > div[role="img"] { max-width: 100%; height: var(--alt-print, 245px) !important; }
   .report-trio { display: grid !important; grid-template-columns: repeat(3, 1fr); column-gap: 5mm; }
   .report-trio .report-chart figcaption span span { font-size: 12px; }
-  .report-kpis { grid-template-columns: repeat(5, 1fr) !important; }
+  .report-kpis { grid-template-columns: repeat(var(--cols, 5), 1fr) !important; }
   .report-kpis > div { padding: 3mm 2.5mm !important; }
   .report-kpis dt { font-size: 7.5px !important; }
   .report-kpis dd.oep-headline { font-size: 14px !important; line-height: 1.25 !important; white-space: nowrap; }

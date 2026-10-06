@@ -20,7 +20,7 @@ The shared atlas index and URL filters connect the map, table, project details, 
 
 ## Verified in this version
 
-- Data generation and 30,119 unique IDs; each record matches its detail chunk and exact source investment.
+- Data generation from the quarterly reports' deduplicated base (26,695 unique IDs at 2026-T3); each record matches its detail chunk and exact source investment.
 - Totals match for all regions, sectors and companies; accent-insensitive search and URL serialization pass.
 - Antofagasta → Energía → table → project panel → region comparison → shared link → profile: 11 projects and US$ 7,161.5 million throughout.
 - Project links restore the open panel. Escape closes it and returns focus. The mobile filter sheet supports keyboard focus.
@@ -31,7 +31,7 @@ The shared atlas index and URL filters connect the map, table, project details, 
 
 The source repository is `alfredosvaldo/oep-web-v3`; GitHub Pages serves the `gh-pages` branch at https://oep-chile.com/. Keep `public/CNAME` in every export so deployments preserve the custom domain.
 
-Run `bash scripts/deploy-gh-pages.sh` from this project to regenerate and publish. The original Excel workbook belongs at `data/raw/SEIA_TOTAL_93_26Q2.xlsx` and stays local. A clone without that workbook can verify the committed generated data with `npm run check:atlas` and export it using `GHPAGES=1 npx next build`.
+Each quarter: copy the new base to `data/raw/`, update the path in `scripts/build-data.mjs`, the control values (build-data.mjs, check-atlas.mjs) and `lib/corte.ts`, then run `bash scripts/deploy-gh-pages.sh` from this project to regenerate and publish. The source workbook is the reports' cleaned base, `data/raw/SEIA_93_26Q3_sin_duplicados_FINAL.xlsx` (output of script 02 in the quarterly folder, with the SEA "En calificación" reconciliation column), and stays local. The site and the reports share the same method; the control values in `scripts/build-data.mjs` are computed separately in R. A clone without that workbook can verify the committed generated data with `npm run check:atlas` and export it using `GHPAGES=1 npx next build`.
 
 The background video was created with Gemini and provided by the project owner, who authorized its public release. The hero uses a tighter crop to keep the corner watermark outside the visible frame. Its silent derivative and poster are in `public/media/`. No employment estimates are derived from the SEIA data.
 

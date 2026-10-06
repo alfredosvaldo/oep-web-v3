@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LogoLockup } from '@/components/Logo';
+import { CORTE } from '@/lib/corte';
 
 const NAV = [
   { href: '/mapa/', label: 'Mapa' },
@@ -41,7 +42,7 @@ export default function Header() {
           })}
         </nav>
         <span className="hidden whitespace-nowrap font-mono text-[11px] tracking-wide text-oep-ink/55 xl:inline">
-          1993–2026 · T2
+          1993–2026 · {CORTE.periodo.slice(-2)}
         </span>
 
         {/* Menú compacto: sin librería, <details> nativo */}

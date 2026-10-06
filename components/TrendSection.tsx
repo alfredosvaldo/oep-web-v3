@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { fetchAnnual, fetchQuarterly, type Quarter, type Year } from '@/lib/series';
+import { CORTE } from '@/lib/corte';
 
 // echarts vive en un chunk aparte: el gráfico se descarga bajo demanda.
 const TrendChart = dynamic(() => import('@/components/TrendChart'), { ssr: false });
@@ -29,7 +30,7 @@ export default function TrendSection() {
           La inversión y el tiempo, en perspectiva
         </h2>
         <p className="mt-1 font-mono text-[12px] text-white/50">
-          Proyectos e inversión declarada · 1993–2026-T2
+          Proyectos e inversión declarada · {CORTE.rango}
         </p>
         <p className="mt-3 max-w-2xl text-[15px] leading-6 text-white/70">
           Compara la inversión de cada cohorte de presentación con los tiempos de tramitación disponibles.
@@ -44,7 +45,7 @@ export default function TrendSection() {
           <div className="mt-8 border-t border-oep-line-light pt-6">
             <TrendChart anual={data.anual} trimestral={data.trimestral} />
             <p className="mt-4 font-mono text-[11px] text-white/45">
-              Fuente: SEA. Cálculos OEP. Cohortes de presentación; 2026 incluye solo T1–T2. Medianas con ambas fechas; «—» indica muestra insuficiente.
+              Fuente: SEA. Cálculos OEP. Cohortes de presentación; 2026 incluye solo T1–{CORTE.periodo.slice(-1)}. Medianas con ambas fechas; «—» indica muestra insuficiente.
             </p>
           </div>
         ) : (

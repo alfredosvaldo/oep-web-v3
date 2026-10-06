@@ -10,6 +10,7 @@ import TrendSection from '@/components/TrendSection';
 import MegaprojectsSection from '@/components/MegaprojectsSection';
 import { fetchKpis, type Kpis } from '@/lib/kpis';
 import { fmtInt, fmtMM, fmtDeltaPct } from '@/lib/format';
+import { periodoPrevio } from '@/lib/corte';
 
 function PulseStrip({ k }: { k: Kpis }) {
   const q = k.ultimo_trimestre;
@@ -43,7 +44,7 @@ function PulseStrip({ k }: { k: Kpis }) {
                   }`}
                 >
                   {fmtDeltaPct(c.delta)}{' '}
-                  <span className="font-normal text-oep-ink/55">vs. {q.periodo === '2026-T2' ? '2026-T1' : 'período previo'}</span>
+                  <span className="font-normal text-oep-ink/55">vs. {periodoPrevio(q.periodo)}</span>
                 </dd>
               )}
             </div>

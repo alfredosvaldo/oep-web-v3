@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 /**
  * OEP — Pipeline de datos (§2 del brief).
- * Lee data/raw/SEIA_TOTAL_93_26Q2.xlsx → aplica limpieza → emite public/data/.
- * Falla en voz alta (exit 1) si el conteo de filas difiere de 30.119 o si los
- * totales se alejan > 1 % de los hechos semilla (§2).
+ * Lee la BASE DEPURADA de los informes (data/raw/SEIA_93_26Q3_sin_duplicados_FINAL.xlsx: salida del script 02
+ * de la carpeta trimestral, con dedup, región normalizada, estados corregidos y la columna de conciliación con SEA)
+ * → aplica limpieza de presentación → emite public/data/. El sitio y los informes usan el MISMO método y la misma base.
+ * Falla en voz alta (exit 1) si el conteo de filas o los totales se alejan de los valores de control, que se calculan
+ * aparte en R sobre df_sin_dup.csv (no con este script).
  */
 import pkg from 'xlsx';
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -12,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const { readFile, utils } = pkg;
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const SRC = path.join(ROOT, 'data/raw/SEIA_TOTAL_93_26Q2.xlsx');
+const SRC = path.join(ROOT, 'data/raw/SEIA_93_26Q3_sin_duplicados_FINAL.xlsx');
 const OUT = path.join(ROOT, 'public/data');
 
 /* ---------------------------------------------------------------- helpers */
@@ -185,7 +187,11 @@ const titularGroups = new Map(); // key -> Map(displayCandidate -> count)
 for (const r of raw) {
   const fp = serialToDate(r.fecha_presentacion);
   const fc = serialToDate(r.fecha_calificacion);
-  const estado = String(r.estado ?? '').trim();
+  let estado = String(r.estado ?? '').trim();
+  // Conciliación con SEA (script 01 de la carpeta trimestral): los proyectos que SEA tiene hoy En Calificación pero la base
+  // guardaba como Aprobado/Rechazado (reabiertos por recurso) se muestran En Calificación, igual que en el stock de los informes.
+  const reabierto = String(r.en_calificacion_al_corte).toUpperCase() === 'TRUE' && estado !== 'En Calificación' && estado !== 'En Admisión';
+  if (reabierto) estado = 'En Calificación'; // mientras está reabierto no tiene fecha de calificación vigente
   const grupo = ESTADO_GRUPO[estado];
   if (!fp) throw new Error(`fecha_presentacion inválida en fila: ${JSON.stringify(r.nombre)}`);
   if (!grupo) throw new Error(`estado sin mapear: ${JSON.stringify(r.estado)}`);
@@ -213,8 +219,8 @@ for (const r of raw) {
     trimestre: Math.floor(fp.getUTCMonth() / 3) + 1,
     estado,
     estado_grupo: grupo,
-    fecha_calificacion: fc ? iso(fc) : null,
-    dias_tramitacion: fc ? Math.round(Number(r.fecha_calificacion) - Number(r.fecha_presentacion)) : null,
+    fecha_calificacion: fc && !reabierto ? iso(fc) : null,
+    dias_tramitacion: fc && !reabierto ? Math.round(Number(r.fecha_calificacion) - Number(r.fecha_presentacion)) : null,
     calificado: estado === 'Aprobado' || estado === 'Rechazado',
     sector: String(r.sector_productivo ?? '').trim(),
     coords: cleanCoords(r.latitud_punto_representativo, r.longitud_punto_representativo),
@@ -402,15 +408,15 @@ const totalMmu = sum(projects, (p) => p.inversion_mmu);
 const aprob = projects.filter((p) => p.estado === 'Aprobado');
 const calif = projects.filter((p) => p.calificado);
 // KPI "cartera en evaluación" sigue la cifra oficial SEA = estado "En Calificación"
-// (365 / US$ 88.383 MM, §2). "En Admisión" (1 proyecto) sigue mapeado a estado_grupo
+// (347 / US$ 86.360 MM, conciliado con SEA). "En Admisión" (9 proyectos) sigue mapeado a estado_grupo
 // "En evaluación" por semántica, pero no entra al KPI.
 const evalu = projects.filter((p) => p.estado === 'En Calificación');
 const lastQ = quarterly[quarterly.length - 1];
 const prevQ = quarterly[quarterly.length - 2];
 
 const kpis = {
-  periodo: '2026-T2',
-  actualizado: '2026-06-30',
+  periodo: '2026-T3',
+  actualizado: '2026-09-30',
   totales: {
     proyectos: projects.length,
     inversion_mmu: totalMmu,
@@ -632,28 +638,29 @@ console.log(`  perfiles: ${regionAgg.items.length} regiones · ${sectorAgg.items
 
 /* ============================================================ aserciones vs §2 */
 
-console.log('\nAserciones contra hechos semilla (§2):');
-assertEq('Filas', projects.length, 30119);
-assertNear('Inversión total (US$ MM)', totalMmu, 1046130);
-assertEq('Aprobados (n)', aprob.length, 18625);
-assertNear('Aprobados (US$ MM)', kpis.aprobados.inversion_mmu, 515798);
-assertNear('Tasa de aprobación', kpis.aprobados.tasa_aprobacion, 0.936, 0.005);
-assertEq('En calificación (n)', evalu.length, 365);
-assertEq('En evaluación incluida admisión (n)', projects.filter(p => p.estado_grupo === 'En evaluación').length, 366);
-assertNear('En evaluación (US$ MM)', kpis.evaluacion.inversion_mmu, 88383);
+console.log('\nAserciones contra valores de control (calculados en R sobre df_sin_dup.csv, 2026-T3):');
+assertEq('Filas', projects.length, 26695);
+assertNear('Inversión total (US$ MM)', totalMmu, 867772);
+assertEq('Aprobados (n)', aprob.length, 18640);
+assertNear('Aprobados (US$ MM)', kpis.aprobados.inversion_mmu, 532376);
+assertNear('Tasa de aprobación', kpis.aprobados.tasa_aprobacion, 0.9397, 0.005);
+assertEq('En calificación (n)', evalu.length, 347);
+assertEq('En evaluación incluida admisión (n)', projects.filter(p => p.estado_grupo === 'En evaluación').length, 356);
+// Control externo: SEA muestra 347 proyectos y US$ 86.374,6 millones En Calificación (listado oficial, 2026-10-06).
+assertNear('En evaluación (US$ MM)', kpis.evaluacion.inversion_mmu, 86360);
 const topSectorMmu = sectorAgg.items[0];
 assertEq('Sector líder por inversión', topSectorMmu.nombre, 'Energía');
-assertNear('Energía (US$ MM)', topSectorMmu.inversion_mmu, 455637);
+assertNear('Energía (US$ MM)', topSectorMmu.inversion_mmu, 336234);
 const topSectorN = [...sectorAgg.items].sort((a, b) => b.proyectos - a.proyectos)[0];
-assertEq('Sector líder por n° proyectos', topSectorN.nombre, 'Saneamiento Ambiental');
-assertEq('Saneamiento (n)', topSectorN.proyectos, 5766);
+assertEq('Sector líder por n° proyectos', topSectorN.nombre, 'Pesca y Acuicultura');
+assertEq('Pesca y Acuicultura (n)', topSectorN.proyectos, 5274);
 const anto = regionAgg.items.find((r) => r.slug === 'antofagasta');
-assertNear('Antofagasta (US$ MM)', anto.inversion_mmu, 276478);
+assertNear('Antofagasta (US$ MM)', anto.inversion_mmu, 233726);
 const byYear = new Map();
 for (const p of projects) byYear.set(p.anio, (byYear.get(p.anio) || 0) + 1);
-assertEq('Año pico 2006 (n)', byYear.get(2006), 1676);
-assertEq('Año pico 2008 (n)', byYear.get(2008), 1662);
-assertEq('2025 (n)', byYear.get(2025), 475);
+assertEq('Año pico 2006 (n)', byYear.get(2006), 1536);
+assertEq('Año 2008 (n)', byYear.get(2008), 1471);
+assertEq('2025 (n)', byYear.get(2025), 419);
 
 console.log(`\nEmitidos ${written.length} archivos en public/data/`);
 if (failures > 0) {
