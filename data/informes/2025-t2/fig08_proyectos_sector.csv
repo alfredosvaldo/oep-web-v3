@@ -1,0 +1,222 @@
+periodo,serie,valor
+2021-T2,Agropecuario,5
+2021-T2,Energía,152
+2021-T2,Equipamiento,0
+2021-T2,Forestal,2
+2021-T2,Infraestructura Hidráulica,6
+2021-T2,Infraestructura Portuaria,2
+2021-T2,Infraestructura de Transporte,2
+2021-T2,Inmobiliarios,22
+2021-T2,Instalaciones fabriles varias,3
+2021-T2,Minería,30
+2021-T2,Otros,12
+2021-T2,Pesca y Acuicultura,14
+2021-T2,Saneamiento Ambiental,18
+2021-T3,Agropecuario,3
+2021-T3,Energía,41
+2021-T3,Equipamiento,0
+2021-T3,Forestal,2
+2021-T3,Infraestructura Hidráulica,6
+2021-T3,Infraestructura Portuaria,1
+2021-T3,Infraestructura de Transporte,0
+2021-T3,Inmobiliarios,34
+2021-T3,Instalaciones fabriles varias,0
+2021-T3,Minería,17
+2021-T3,Otros,14
+2021-T3,Pesca y Acuicultura,3
+2021-T3,Saneamiento Ambiental,13
+2021-T4,Agropecuario,9
+2021-T4,Energía,34
+2021-T4,Equipamiento,0
+2021-T4,Forestal,0
+2021-T4,Infraestructura Hidráulica,4
+2021-T4,Infraestructura Portuaria,3
+2021-T4,Infraestructura de Transporte,2
+2021-T4,Inmobiliarios,30
+2021-T4,Instalaciones fabriles varias,2
+2021-T4,Minería,21
+2021-T4,Otros,12
+2021-T4,Pesca y Acuicultura,4
+2021-T4,Saneamiento Ambiental,17
+2022-T1,Agropecuario,6
+2022-T1,Energía,27
+2022-T1,Equipamiento,1
+2022-T1,Forestal,1
+2022-T1,Infraestructura Hidráulica,4
+2022-T1,Infraestructura Portuaria,3
+2022-T1,Infraestructura de Transporte,5
+2022-T1,Inmobiliarios,27
+2022-T1,Instalaciones fabriles varias,5
+2022-T1,Minería,29
+2022-T1,Otros,15
+2022-T1,Pesca y Acuicultura,5
+2022-T1,Saneamiento Ambiental,14
+2022-T2,Agropecuario,2
+2022-T2,Energía,39
+2022-T2,Equipamiento,0
+2022-T2,Forestal,0
+2022-T2,Infraestructura Hidráulica,4
+2022-T2,Infraestructura Portuaria,1
+2022-T2,Infraestructura de Transporte,3
+2022-T2,Inmobiliarios,27
+2022-T2,Instalaciones fabriles varias,3
+2022-T2,Minería,18
+2022-T2,Otros,9
+2022-T2,Pesca y Acuicultura,4
+2022-T2,Saneamiento Ambiental,14
+2022-T3,Agropecuario,7
+2022-T3,Energía,32
+2022-T3,Equipamiento,0
+2022-T3,Forestal,0
+2022-T3,Infraestructura Hidráulica,3
+2022-T3,Infraestructura Portuaria,0
+2022-T3,Infraestructura de Transporte,1
+2022-T3,Inmobiliarios,25
+2022-T3,Instalaciones fabriles varias,4
+2022-T3,Minería,25
+2022-T3,Otros,12
+2022-T3,Pesca y Acuicultura,10
+2022-T3,Saneamiento Ambiental,19
+2022-T4,Agropecuario,4
+2022-T4,Energía,33
+2022-T4,Equipamiento,0
+2022-T4,Forestal,1
+2022-T4,Infraestructura Hidráulica,5
+2022-T4,Infraestructura Portuaria,1
+2022-T4,Infraestructura de Transporte,2
+2022-T4,Inmobiliarios,22
+2022-T4,Instalaciones fabriles varias,4
+2022-T4,Minería,13
+2022-T4,Otros,11
+2022-T4,Pesca y Acuicultura,2
+2022-T4,Saneamiento Ambiental,10
+2023-T1,Agropecuario,1
+2023-T1,Energía,35
+2023-T1,Equipamiento,0
+2023-T1,Forestal,0
+2023-T1,Infraestructura Hidráulica,1
+2023-T1,Infraestructura Portuaria,0
+2023-T1,Infraestructura de Transporte,0
+2023-T1,Inmobiliarios,17
+2023-T1,Instalaciones fabriles varias,5
+2023-T1,Minería,14
+2023-T1,Otros,19
+2023-T1,Pesca y Acuicultura,8
+2023-T1,Saneamiento Ambiental,13
+2023-T2,Agropecuario,2
+2023-T2,Energía,37
+2023-T2,Equipamiento,0
+2023-T2,Forestal,0
+2023-T2,Infraestructura Hidráulica,4
+2023-T2,Infraestructura Portuaria,3
+2023-T2,Infraestructura de Transporte,1
+2023-T2,Inmobiliarios,20
+2023-T2,Instalaciones fabriles varias,4
+2023-T2,Minería,13
+2023-T2,Otros,12
+2023-T2,Pesca y Acuicultura,7
+2023-T2,Saneamiento Ambiental,17
+2023-T3,Agropecuario,6
+2023-T3,Energía,38
+2023-T3,Equipamiento,0
+2023-T3,Forestal,1
+2023-T3,Infraestructura Hidráulica,3
+2023-T3,Infraestructura Portuaria,0
+2023-T3,Infraestructura de Transporte,2
+2023-T3,Inmobiliarios,20
+2023-T3,Instalaciones fabriles varias,4
+2023-T3,Minería,16
+2023-T3,Otros,7
+2023-T3,Pesca y Acuicultura,11
+2023-T3,Saneamiento Ambiental,11
+2023-T4,Agropecuario,3
+2023-T4,Energía,64
+2023-T4,Equipamiento,1
+2023-T4,Forestal,1
+2023-T4,Infraestructura Hidráulica,2
+2023-T4,Infraestructura Portuaria,1
+2023-T4,Infraestructura de Transporte,2
+2023-T4,Inmobiliarios,26
+2023-T4,Instalaciones fabriles varias,2
+2023-T4,Minería,10
+2023-T4,Otros,11
+2023-T4,Pesca y Acuicultura,3
+2023-T4,Saneamiento Ambiental,9
+2024-T1,Agropecuario,2
+2024-T1,Energía,36
+2024-T1,Equipamiento,1
+2024-T1,Forestal,0
+2024-T1,Infraestructura Hidráulica,1
+2024-T1,Infraestructura Portuaria,1
+2024-T1,Infraestructura de Transporte,1
+2024-T1,Inmobiliarios,24
+2024-T1,Instalaciones fabriles varias,1
+2024-T1,Minería,15
+2024-T1,Otros,11
+2024-T1,Pesca y Acuicultura,7
+2024-T1,Saneamiento Ambiental,5
+2024-T2,Agropecuario,2
+2024-T2,Energía,42
+2024-T2,Equipamiento,0
+2024-T2,Forestal,0
+2024-T2,Infraestructura Hidráulica,3
+2024-T2,Infraestructura Portuaria,1
+2024-T2,Infraestructura de Transporte,2
+2024-T2,Inmobiliarios,26
+2024-T2,Instalaciones fabriles varias,3
+2024-T2,Minería,20
+2024-T2,Otros,12
+2024-T2,Pesca y Acuicultura,8
+2024-T2,Saneamiento Ambiental,11
+2024-T3,Agropecuario,1
+2024-T3,Energía,29
+2024-T3,Equipamiento,0
+2024-T3,Forestal,2
+2024-T3,Infraestructura Hidráulica,2
+2024-T3,Infraestructura Portuaria,1
+2024-T3,Infraestructura de Transporte,2
+2024-T3,Inmobiliarios,24
+2024-T3,Instalaciones fabriles varias,2
+2024-T3,Minería,17
+2024-T3,Otros,27
+2024-T3,Pesca y Acuicultura,8
+2024-T3,Saneamiento Ambiental,13
+2024-T4,Agropecuario,2
+2024-T4,Energía,42
+2024-T4,Equipamiento,0
+2024-T4,Forestal,0
+2024-T4,Infraestructura Hidráulica,6
+2024-T4,Infraestructura Portuaria,0
+2024-T4,Infraestructura de Transporte,3
+2024-T4,Inmobiliarios,31
+2024-T4,Instalaciones fabriles varias,0
+2024-T4,Minería,14
+2024-T4,Otros,9
+2024-T4,Pesca y Acuicultura,7
+2024-T4,Saneamiento Ambiental,10
+2025-T1,Agropecuario,4
+2025-T1,Energía,42
+2025-T1,Equipamiento,0
+2025-T1,Forestal,0
+2025-T1,Infraestructura Hidráulica,2
+2025-T1,Infraestructura Portuaria,1
+2025-T1,Infraestructura de Transporte,1
+2025-T1,Inmobiliarios,27
+2025-T1,Instalaciones fabriles varias,3
+2025-T1,Minería,23
+2025-T1,Otros,7
+2025-T1,Pesca y Acuicultura,5
+2025-T1,Saneamiento Ambiental,8
+2025-T2,Agropecuario,1
+2025-T2,Energía,33
+2025-T2,Equipamiento,0
+2025-T2,Forestal,0
+2025-T2,Infraestructura Hidráulica,3
+2025-T2,Infraestructura Portuaria,0
+2025-T2,Infraestructura de Transporte,4
+2025-T2,Inmobiliarios,27
+2025-T2,Instalaciones fabriles varias,1
+2025-T2,Minería,8
+2025-T2,Otros,6
+2025-T2,Pesca y Acuicultura,5
+2025-T2,Saneamiento Ambiental,9
