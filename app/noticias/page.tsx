@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const pdfUrl2 = `${basePath}/noticias/el-mercurio-permisologia-2027-2026-11-02.pdf`;
+const previewUrl2 = `${basePath}/noticias/el-mercurio-permisologia-2027-2026-11-02.jpg`;
 const pdfUrl = `${basePath}/noticias/el-mercurio-record-inversion-seia-2026-09-26.pdf`;
 const previewUrl = `${basePath}/noticias/el-mercurio-record-inversion-seia-2026-09-26.jpg`;
 
@@ -22,6 +24,64 @@ export default function Noticias() {
           <PageHeader kicker="Noticias" titulo="OEP en la conversación pública" meta="prensa y apariciones">
             Selección de entrevistas, menciones y análisis del observatorio publicados en medios.
           </PageHeader>
+
+          <article className="mt-10 border-y border-oep-line py-8 lg:py-10">
+            <div className="grid gap-8 lg:grid-cols-[minmax(280px,0.72fr)_minmax(0,1.28fr)] lg:gap-12">
+              <a
+                href={pdfUrl2}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir la página de El Mercurio en PDF"
+                className="group block overflow-hidden border border-oep-line bg-white"
+              >
+                <img
+                  src={previewUrl2}
+                  alt="Página de Economía y Negocios de El Mercurio con el reportaje sobre la permisología y la inversión en 2027"
+                  width="1322"
+                  height="1654"
+                  className="h-auto w-full transition-opacity duration-nav group-hover:opacity-90"
+                />
+              </a>
+
+              <div className="flex flex-col">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[12px] uppercase tracking-[0.12em] text-oep-ink/55">
+                  <span className="text-oep-copper-dark">En prensa</span>
+                  <span>El Mercurio · Economía y Negocios</span>
+                  <time dateTime="2026-11-02">02.11.2026</time>
+                </div>
+
+                <h2 className="oep-headline mt-5 max-w-3xl text-[clamp(28px,3.2vw,48px)] leading-[1.06]">
+                  ¿Reactivación en 2027? El flujo de nuevas inversiones que desafía la gestión de la “permisología”
+                </h2>
+
+                <p className="mt-6 max-w-2xl text-[16px] leading-7 text-oep-ink/70">
+                  El Mercurio recoge la mirada del OEP sobre el ingreso de nuevos proyectos a evaluación ambiental en 2026 y los plazos que separan su aprobación de la inversión efectiva, en un reportaje que cuenta con la participación de Jorge Valverde, fundador y director ejecutivo del observatorio.
+                </p>
+
+                <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+                  <a
+                    href={pdfUrl2}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex min-h-11 items-center justify-center rounded-md bg-oep-ink px-5 text-[14px] font-semibold text-white transition-colors duration-nav hover:bg-oep-emerald"
+                  >
+                    Leer artículo en PDF
+                  </a>
+                  <a
+                    href={pdfUrl2}
+                    download
+                    className="text-[14px] font-semibold text-oep-ink underline decoration-oep-line underline-offset-4 hover:text-oep-emerald"
+                  >
+                    Descargar · 1 página
+                  </a>
+                </div>
+
+                <p className="oep-source mt-6">
+                  Fuente: El Mercurio, Economía y Negocios, lunes 2 de noviembre de 2026.
+                </p>
+              </div>
+            </div>
+          </article>
 
           <article className="mt-10 border-y border-oep-line py-8 lg:py-10">
             <div className="grid gap-8 lg:grid-cols-[minmax(280px,0.72fr)_minmax(0,1.28fr)] lg:gap-12">
