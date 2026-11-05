@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
@@ -24,6 +25,63 @@ export default function Noticias() {
           <PageHeader kicker="Noticias" titulo="OEP en la conversación pública" meta="prensa y apariciones">
             Selección de entrevistas, menciones y análisis del observatorio publicados en medios.
           </PageHeader>
+
+          <article className="mt-10 border-y border-oep-line py-8 lg:py-10">
+            <div className="grid gap-8 lg:grid-cols-[minmax(280px,0.72fr)_minmax(0,1.28fr)] lg:gap-12">
+              <figure>
+                <div className="aspect-video w-full overflow-hidden border border-oep-line bg-oep-ink">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/2IPvrTZ6ix0?start=1222&end=1285"
+                    title="Francisco Vidal cita el estudio del OEP en Ahora es Cuando, Radio Infinita (3 de noviembre de 2026)"
+                    loading="lazy"
+                    allow="encrypted-media; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+                <figcaption className="mt-3 flex flex-col gap-1">
+                  <a
+                    href="https://youtu.be/2IPvrTZ6ix0?t=1222"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[14px] font-semibold text-oep-ink underline decoration-oep-line underline-offset-4 hover:text-oep-emerald"
+                  >
+                    Ver en YouTube desde el minuto 20:22
+                  </a>
+                  <span className="oep-source">Fragmento: Radio Infinita, Ahora es Cuando, 3 nov 2026</span>
+                </figcaption>
+              </figure>
+
+              <div className="flex flex-col">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[12px] uppercase tracking-[0.12em] text-oep-ink/55">
+                  <span className="text-oep-copper-dark">En radio</span>
+                  <span>Radio Infinita · Ahora es Cuando</span>
+                  <time dateTime="2026-11-03">03.11.2026</time>
+                </div>
+
+                <h2 className="oep-headline mt-5 max-w-3xl text-[clamp(28px,3.2vw,48px)] leading-[1.06]">
+                  Francisco Vidal cita el estudio del OEP en Radio Infinita
+                </h2>
+
+                <p className="mt-6 max-w-2xl text-[16px] leading-7 text-oep-ink/70">
+                  En el segmento “Segundo Piso” de Ahora es Cuando, Francisco Vidal se refirió al estudio del
+                  OEP sobre la demora entre la aprobación ambiental y la concreción de las grandes inversiones, y mencionó a
+                  Jorge Valverde y al Observatorio Económico de Permisos. Señaló que esas inversiones, sobre todo
+                  en minería y energía, tardan entre 2 y 4 años en materializarse y representan unos 120 mil empleos.
+                </p>
+
+                <div className="mt-8">
+                  <Link
+                    href="/informes/2026-t3/"
+                    className="inline-flex min-h-11 items-center justify-center rounded-md bg-oep-ink px-5 text-[14px] font-semibold text-white transition-colors duration-nav hover:bg-oep-emerald"
+                  >
+                    Lee el estudio
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </article>
 
           <article className="mt-10 border-y border-oep-line py-8 lg:py-10">
             <div className="grid gap-8 lg:grid-cols-[minmax(280px,0.72fr)_minmax(0,1.28fr)] lg:gap-12">
