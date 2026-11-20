@@ -1,0 +1,56 @@
+pregunta,texto,respuesta,n
+q1,"En los últimos seis meses, la implementación de la Ley 21.770 (LMAS) ha reducido efectivamente los plazos de los permisos sectoriales que enfrentan los proyectos.",Totalmente en desacuerdo,1
+q1,"En los últimos seis meses, la implementación de la Ley 21.770 (LMAS) ha reducido efectivamente los plazos de los permisos sectoriales que enfrentan los proyectos.",En desacuerdo,4
+q1,"En los últimos seis meses, la implementación de la Ley 21.770 (LMAS) ha reducido efectivamente los plazos de los permisos sectoriales que enfrentan los proyectos.",Ni de acuerdo ni en desacuerdo,2
+q1,"En los últimos seis meses, la implementación de la Ley 21.770 (LMAS) ha reducido efectivamente los plazos de los permisos sectoriales que enfrentan los proyectos.",De acuerdo,1
+q1,"En los últimos seis meses, la implementación de la Ley 21.770 (LMAS) ha reducido efectivamente los plazos de los permisos sectoriales que enfrentan los proyectos.",Totalmente de acuerdo,0
+q2,"En los últimos seis meses, la Oficina de Autorizaciones Sectoriales e Inversión (OASI) ha mejorado la coordinación entre servicios en la tramitación de proyectos.",Totalmente en desacuerdo,0
+q2,"En los últimos seis meses, la Oficina de Autorizaciones Sectoriales e Inversión (OASI) ha mejorado la coordinación entre servicios en la tramitación de proyectos.",En desacuerdo,2
+q2,"En los últimos seis meses, la Oficina de Autorizaciones Sectoriales e Inversión (OASI) ha mejorado la coordinación entre servicios en la tramitación de proyectos.",Ni de acuerdo ni en desacuerdo,2
+q2,"En los últimos seis meses, la Oficina de Autorizaciones Sectoriales e Inversión (OASI) ha mejorado la coordinación entre servicios en la tramitación de proyectos.",De acuerdo,4
+q2,"En los últimos seis meses, la Oficina de Autorizaciones Sectoriales e Inversión (OASI) ha mejorado la coordinación entre servicios en la tramitación de proyectos.",Totalmente de acuerdo,0
+q3,La etapa posterior a la RCA (permisos sectoriales hasta el inicio de obras) es hoy un obstáculo mayor para materializar inversiones que la evaluación ambiental en el SEIA.,Totalmente en desacuerdo,1
+q3,La etapa posterior a la RCA (permisos sectoriales hasta el inicio de obras) es hoy un obstáculo mayor para materializar inversiones que la evaluación ambiental en el SEIA.,En desacuerdo,2
+q3,La etapa posterior a la RCA (permisos sectoriales hasta el inicio de obras) es hoy un obstáculo mayor para materializar inversiones que la evaluación ambiental en el SEIA.,Ni de acuerdo ni en desacuerdo,2
+q3,La etapa posterior a la RCA (permisos sectoriales hasta el inicio de obras) es hoy un obstáculo mayor para materializar inversiones que la evaluación ambiental en el SEIA.,De acuerdo,2
+q3,La etapa posterior a la RCA (permisos sectoriales hasta el inicio de obras) es hoy un obstáculo mayor para materializar inversiones que la evaluación ambiental en el SEIA.,Totalmente de acuerdo,1
+q4,Obtener una RCA favorable entrega hoy certeza suficiente para adoptar la decisión final de inversión.,Totalmente en desacuerdo,0
+q4,Obtener una RCA favorable entrega hoy certeza suficiente para adoptar la decisión final de inversión.,En desacuerdo,0
+q4,Obtener una RCA favorable entrega hoy certeza suficiente para adoptar la decisión final de inversión.,Ni de acuerdo ni en desacuerdo,7
+q4,Obtener una RCA favorable entrega hoy certeza suficiente para adoptar la decisión final de inversión.,De acuerdo,0
+q4,Obtener una RCA favorable entrega hoy certeza suficiente para adoptar la decisión final de inversión.,Totalmente de acuerdo,1
+q5,"Chile ha perdido atractivo frente a países de la región, como Argentina o Perú, como destino de inversión minera y energética.",Totalmente en desacuerdo,0
+q5,"Chile ha perdido atractivo frente a países de la región, como Argentina o Perú, como destino de inversión minera y energética.",En desacuerdo,0
+q5,"Chile ha perdido atractivo frente a países de la región, como Argentina o Perú, como destino de inversión minera y energética.",Ni de acuerdo ni en desacuerdo,2
+q5,"Chile ha perdido atractivo frente a países de la región, como Argentina o Perú, como destino de inversión minera y energética.",De acuerdo,6
+q5,"Chile ha perdido atractivo frente a países de la región, como Argentina o Perú, como destino de inversión minera y energética.",Totalmente de acuerdo,0
+q6,El mecanismo de indemnización a inversionistas propuesto por RCA anuladas judicialmente reduce el riesgo percibido de invertir en Chile.,Totalmente en desacuerdo,2
+q6,El mecanismo de indemnización a inversionistas propuesto por RCA anuladas judicialmente reduce el riesgo percibido de invertir en Chile.,En desacuerdo,4
+q6,El mecanismo de indemnización a inversionistas propuesto por RCA anuladas judicialmente reduce el riesgo percibido de invertir en Chile.,Ni de acuerdo ni en desacuerdo,1
+q6,El mecanismo de indemnización a inversionistas propuesto por RCA anuladas judicialmente reduce el riesgo percibido de invertir en Chile.,De acuerdo,0
+q6,El mecanismo de indemnización a inversionistas propuesto por RCA anuladas judicialmente reduce el riesgo percibido de invertir en Chile.,Totalmente de acuerdo,0
+q7,El mecanismo de indemnización por RCA anuladas propuesto debilita los incentivos a realizar evaluaciones ambientales rigurosas,Totalmente en desacuerdo,3
+q7,El mecanismo de indemnización por RCA anuladas propuesto debilita los incentivos a realizar evaluaciones ambientales rigurosas,En desacuerdo,2
+q7,El mecanismo de indemnización por RCA anuladas propuesto debilita los incentivos a realizar evaluaciones ambientales rigurosas,Ni de acuerdo ni en desacuerdo,1
+q7,El mecanismo de indemnización por RCA anuladas propuesto debilita los incentivos a realizar evaluaciones ambientales rigurosas,De acuerdo,1
+q7,El mecanismo de indemnización por RCA anuladas propuesto debilita los incentivos a realizar evaluaciones ambientales rigurosas,Totalmente de acuerdo,0
+q8,La mayor celeridad del Comité de Ministros ha aumentado el riesgo de judicialización posterior de los proyectos destrabados.,Totalmente en desacuerdo,0
+q8,La mayor celeridad del Comité de Ministros ha aumentado el riesgo de judicialización posterior de los proyectos destrabados.,En desacuerdo,3
+q8,La mayor celeridad del Comité de Ministros ha aumentado el riesgo de judicialización posterior de los proyectos destrabados.,Ni de acuerdo ni en desacuerdo,3
+q8,La mayor celeridad del Comité de Ministros ha aumentado el riesgo de judicialización posterior de los proyectos destrabados.,De acuerdo,1
+q8,La mayor celeridad del Comité de Ministros ha aumentado el riesgo de judicialización posterior de los proyectos destrabados.,Totalmente de acuerdo,1
+q9,"Fallos que anulan RCA de proyectos en construcción, como el caso Collahuasi, elevan de manera persistente la prima de riesgo exigida a proyectos en Chile.",Totalmente en desacuerdo,0
+q9,"Fallos que anulan RCA de proyectos en construcción, como el caso Collahuasi, elevan de manera persistente la prima de riesgo exigida a proyectos en Chile.",En desacuerdo,0
+q9,"Fallos que anulan RCA de proyectos en construcción, como el caso Collahuasi, elevan de manera persistente la prima de riesgo exigida a proyectos en Chile.",Ni de acuerdo ni en desacuerdo,2
+q9,"Fallos que anulan RCA de proyectos en construcción, como el caso Collahuasi, elevan de manera persistente la prima de riesgo exigida a proyectos en Chile.",De acuerdo,4
+q9,"Fallos que anulan RCA de proyectos en construcción, como el caso Collahuasi, elevan de manera persistente la prima de riesgo exigida a proyectos en Chile.",Totalmente de acuerdo,2
+q10,La propuesta de alzar los umbrales de ingreso al SEIA para proyectos mineros e inmobiliarios reducirá de manera significativa plazos y costos sin aumentar la conflictividad.,Totalmente en desacuerdo,0
+q10,La propuesta de alzar los umbrales de ingreso al SEIA para proyectos mineros e inmobiliarios reducirá de manera significativa plazos y costos sin aumentar la conflictividad.,En desacuerdo,1
+q10,La propuesta de alzar los umbrales de ingreso al SEIA para proyectos mineros e inmobiliarios reducirá de manera significativa plazos y costos sin aumentar la conflictividad.,Ni de acuerdo ni en desacuerdo,3
+q10,La propuesta de alzar los umbrales de ingreso al SEIA para proyectos mineros e inmobiliarios reducirá de manera significativa plazos y costos sin aumentar la conflictividad.,De acuerdo,2
+q10,La propuesta de alzar los umbrales de ingreso al SEIA para proyectos mineros e inmobiliarios reducirá de manera significativa plazos y costos sin aumentar la conflictividad.,Totalmente de acuerdo,2
+q11,El reemplazo de permisos sectoriales por declaraciones juradas es compatible con una fiscalización efectiva por parte del Estado.,Totalmente en desacuerdo,0
+q11,El reemplazo de permisos sectoriales por declaraciones juradas es compatible con una fiscalización efectiva por parte del Estado.,En desacuerdo,1
+q11,El reemplazo de permisos sectoriales por declaraciones juradas es compatible con una fiscalización efectiva por parte del Estado.,Ni de acuerdo ni en desacuerdo,1
+q11,El reemplazo de permisos sectoriales por declaraciones juradas es compatible con una fiscalización efectiva por parte del Estado.,De acuerdo,3
+q11,El reemplazo de permisos sectoriales por declaraciones juradas es compatible con una fiscalización efectiva por parte del Estado.,Totalmente de acuerdo,3
