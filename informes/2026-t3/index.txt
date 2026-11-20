@@ -1,6 +1,6 @@
-2:I[5993,["251","static/chunks/251-b88013528f282c12.js","620","static/chunks/620-b7a254930211712d.js","358","static/chunks/358-b79ca3c70bfc3da1.js","711","static/chunks/app/informes/%5Bslug%5D/page-2a55be9538cddaf5.js"],"default"]
-3:I[242,["251","static/chunks/251-b88013528f282c12.js","620","static/chunks/620-b7a254930211712d.js","358","static/chunks/358-b79ca3c70bfc3da1.js","711","static/chunks/app/informes/%5Bslug%5D/page-2a55be9538cddaf5.js"],""]
-4:I[4825,["251","static/chunks/251-b88013528f282c12.js","620","static/chunks/620-b7a254930211712d.js","358","static/chunks/358-b79ca3c70bfc3da1.js","711","static/chunks/app/informes/%5Bslug%5D/page-2a55be9538cddaf5.js"],"default"]
+2:I[5993,["251","static/chunks/251-b88013528f282c12.js","620","static/chunks/620-b7a254930211712d.js","358","static/chunks/358-b79ca3c70bfc3da1.js","711","static/chunks/app/informes/%5Bslug%5D/page-0bf63d2fa5818862.js"],"default"]
+3:I[242,["251","static/chunks/251-b88013528f282c12.js","620","static/chunks/620-b7a254930211712d.js","358","static/chunks/358-b79ca3c70bfc3da1.js","711","static/chunks/app/informes/%5Bslug%5D/page-0bf63d2fa5818862.js"],""]
+4:I[4825,["251","static/chunks/251-b88013528f282c12.js","620","static/chunks/620-b7a254930211712d.js","358","static/chunks/358-b79ca3c70bfc3da1.js","711","static/chunks/app/informes/%5Bslug%5D/page-0bf63d2fa5818862.js"],"default"]
 9:I[2457,[],""]
 b:I[9352,[],""]
 5:{"fontFamily":"var(--font-plexmono), monospace","fontSize":10.5,"fill":"#1B2233"}
